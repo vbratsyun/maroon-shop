@@ -1,0 +1,30 @@
+.recently-viewed {
+  margin-bottom: 72px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 162px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 271px;
+  }
+
+  &--card {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 112px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 126px;
+    }
+  }
+}
+
+.recently-viewed__title {
+  margin-bottom: 31px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 51px;
+  }
+}

@@ -1,0 +1,43 @@
+.logo {
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 131px;
+    margin-left: 0;
+  }
+
+  &--index {
+    cursor: auto;
+  }
+
+  &--footer {
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      margin: 0;
+    }
+  }
+}
+
+.logo__image {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 131px;
+    height: 21px;
+  }
+
+  &--footer {
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      width: 131px;
+      height: 21px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 9px;
+}
+
+.control__mark {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+}
+
+.control__label {
+  font-size: 16px;
+  color: $subtitle;
+
+  &--card {
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+  }
+}
+
+.control__input:checked + .control__mark {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 12px;
+    height: 12px;
+    background-color: $text-color;
+    border-radius: 50%;
+  }
+}
+
+.control__input:checked ~ .control__label {
+  color: inherit;
+}

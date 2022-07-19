@@ -1,0 +1,120 @@
+.page-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 15px 30px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    padding: 40px 45px 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 98px 33px;
+  }
+
+  &--index {
+    margin-bottom: 21px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 28px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 25px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 546px;
+      background: url("../../img/header-background-image-mobile.jpg") no-repeat
+        $background-color;
+      background-size: cover;
+
+      @media (min-width: $tablet-width) {
+        height: 550px;
+        background: url("../../img/header-background-image-tablet.jpg")
+          no-repeat $background-color;
+        background-size: cover;
+      }
+
+      @media (min-width: $desktop-width) {
+        min-height: 650px;
+        background: url("../../img/header-background-image-desktop.jpg")
+          no-repeat $background-color;
+        background-size: cover;
+      }
+    }
+  }
+
+  &--catalog {
+    @media (min-width: $desktop-width) {
+      padding-bottom: 38px;
+    }
+  }
+
+  &--card {
+    @media (min-width: $desktop-width) {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+.page-header__nav {
+  @media (min-width: $desktop-width) {
+    order: 2;
+  }
+}
+
+.page-header__logo {
+  position: relative;
+  left: 4.5%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+  }
+}
+
+.page-header__login {
+  @media (min-width: $desktop-width) {
+    order: 3;
+  }
+}
+
+.page-header__login-icon {
+  position: relative;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 21px;
+  }
+}
+
+.page-header__basket {
+  @media (min-width: $desktop-width) {
+    order: 4;
+  }
+}
+
+.page-header__basket-icon {
+  position: relative;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 21px;
+  }
+}

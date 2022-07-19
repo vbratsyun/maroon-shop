@@ -1,0 +1,14 @@
+.product {
+  margin-bottom: 63px;
+  margin-top: 111px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 104px;
+    margin-top: 132px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 122px;
+    margin-top: 135px;
+  }
+}

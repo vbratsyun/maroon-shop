@@ -1,0 +1,16 @@
+.page-main {
+  position: relative;
+}
+
+.page-main__intro {
+  position: relative;
+  margin-bottom: 126px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 318px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 404px;
+  }
+}

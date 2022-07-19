@@ -1,0 +1,21 @@
+.social-list {
+  @include list;
+
+  display: flex;
+  justify-content: space-between;
+  width: 111px;
+
+  &--menu {
+    @media (min-width: $tablet-width) {
+      width: 101px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.social-list__link-icon {
+  display: block;
+}

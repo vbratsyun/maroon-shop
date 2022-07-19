@@ -1,0 +1,34 @@
+.fieldset-list {
+  @include list;
+
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  &--card {
+    display: flex;
+    gap: 19px;
+
+    @media (min-width: $tablet-width) {
+      gap: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 15px;
+    }
+  }
+}
+
+.fieldset-list__item {
+  margin-bottom: 12px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 8px;
+  }
+
+  &--card {
+    margin: 0;
+  }
+}

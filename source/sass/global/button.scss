@@ -1,0 +1,15 @@
+.button {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  padding: 9px 28px 10px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid $button-border;
+  border-radius: 2px;
+  cursor: pointer;
+}

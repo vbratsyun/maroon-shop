@@ -1,0 +1,57 @@
+.nav {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.nav-list {
+  @include list;
+
+  display: block;
+  margin-bottom: 44px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 35px;
+    margin-right: 22px;
+    margin-bottom: 9px;
+  }
+
+  &--catalog,
+  &--card {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nav-list__item {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.nav-list__link {
+  @include link;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+  }
+}

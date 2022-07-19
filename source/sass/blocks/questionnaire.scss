@@ -1,0 +1,114 @@
+.questionnaire {
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 107px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 140px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 53.5%;
+    left: 50%;
+    width: 250px;
+    height: 252px;
+    background: url("../../img/questionnaire-image-mobile.jpg") no-repeat;
+    background-size: contain;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: 36px;
+      left: 100%;
+      width: 398px;
+      height: 403px;
+      background: url("../../img/questionnaire-image-tablet.jpg") no-repeat;
+      background-size: contain;
+      transform: translateX(-70.5%);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 66px;
+      left: 598px;
+      right: 0;
+      width: 670px;
+      height: 451px;
+      background: url("../../img/questionnaire-image-desktop.jpg") no-repeat;
+      background-size: contain;
+      transform: none;
+    }
+  }
+}
+
+.questionnaire__container {
+  padding: 51px 0 110px;
+  margin-bottom: 272px;
+  background-color: $background-color;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    width: 87%;
+    min-height: 501px;
+    margin: 0 40px;
+    padding: 36px 184px 74px 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+    width: 670px;
+    margin: 0 98px;
+    padding: 90px 100px 100px;
+  }
+}
+
+.questionnaire__wrapper {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 75%;
+    margin: 0;
+  }
+}
+
+.questionnaire__title {
+  margin-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.questionnaire__description {
+  &--first-text {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      width: 94.5%;
+      margin: 0 0 18px 0;
+    }
+  }
+
+  &--second-text {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.questionnaire__link {
+  @include link;
+
+  width: 184px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    margin: 0;
+  }
+}

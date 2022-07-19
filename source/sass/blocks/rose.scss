@@ -1,0 +1,86 @@
+.rose {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 70px;
+  }
+}
+
+.rose__container {
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+
+.rose__image {
+  margin: 0 auto 43px;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    height: 470px;
+    margin: 40px auto 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 630px;
+    height: 647px;
+    margin: 0;
+  }
+}
+
+.rose__title {
+  margin-bottom: 0;
+}
+
+.rose__subtitle {
+  margin: 0;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: normal;
+  color: $subtitle;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.rose__description {
+  margin-bottom: 10px;
+
+  &--last {
+    margin-bottom: 52px;
+  }
+}
+
+.rose__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    gap: 50px;
+  }
+}
+
+.rose__price {
+  @include text;
+  font-size: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 26px;
+  }
+}
+
+.rose__button {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 31.5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 45.5%;
+  }
+}

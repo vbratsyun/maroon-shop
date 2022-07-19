@@ -1,0 +1,12 @@
+.title {
+  margin: 0 auto 11px;
+  font-family: "Relaway", "Arial", "Helvetica", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 130%;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    font-size: 32px;
+  }
+}

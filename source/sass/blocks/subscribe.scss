@@ -1,0 +1,73 @@
+.subscribe {
+  position: relative;
+  margin-bottom: 420px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 177px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 286px;
+  }
+}
+
+.subscribe__wrapper {
+  margin-bottom: 50px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 264px;
+    left: 50%;
+    width: 290px;
+    height: 290px;
+    background: url("../../img/subscribe-image-mobile.jpg") no-repeat;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: -49px;
+      left: 0;
+      width: 354px;
+      height: 354px;
+      background: url("../../img/subscribe-image-tablet.jpg") no-repeat;
+      transform: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -140px;
+      left: 0;
+      width: 699px;
+      height: 466px;
+      background: url("../../img/subscribe-image-desktop.jpg") no-repeat;
+      transform: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40.5%;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 34.2%;
+  }
+}
+
+.subscribe__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+    line-height: 125%;
+  }
+}
+
+.subscribe__link {
+  @include link;
+
+  width: 146px;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+    margin: 0;
+  }
+}

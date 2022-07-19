@@ -1,0 +1,77 @@
+.intro-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 130px);
+  gap: 30px;
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(auto-fit, 245px);
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(auto-fit, 330px);
+    justify-content: space-around;
+    column-gap: 230px;
+    width: 100%;
+  }
+}
+
+.intro-list__item {
+  background-size: contain;
+
+  &--facial-care {
+    background: url("../../img/intro-facial-care-mobile.jpg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      background: url("../../img/intro-facial-care-tablet.jpg") no-repeat;
+      background-size: contain;
+    }
+
+    @media (min-width: $desktop-width) {
+      background: url("../../img/intro-facial-care-desktop.jpg") no-repeat;
+    }
+  }
+
+  &--body-care {
+    background: url("../../img/intro-body-care-mobile.jpg") no-repeat;
+
+    @media (min-width: $tablet-width) {
+      background: url("../../img/intro-body-care-tablet.jpg") no-repeat;
+      background-size: contain;
+    }
+
+    @media (min-width: $desktop-width) {
+      background: url("../../img/intro-body-care-desktop.jpg") no-repeat;
+    }
+  }
+}
+
+.intro-list__link {
+  @include link;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 172px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 330px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 429px;
+  }
+}
+
+.intro-list__text {
+  @include text;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}

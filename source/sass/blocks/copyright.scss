@@ -1,0 +1,36 @@
+.copyright {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.copyright__box {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 5px;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.copyright__box-text {
+  @include text;
+
+  font-size: 12px;
+  line-height: 18px;
+  color: $copyright-text;
+
+  &--law {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.copyright__box-letter {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 18px;
+}

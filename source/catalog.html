@@ -1,519 +1,640 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Maroon-shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maroon-shop</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-   <header class="page-header">
-      <button class="page-header__button button" type="button">
-         <span class="visually-hidden">Открыть меню</span>
+<body class="page__body">
+  <header class="page-header page-header--catalog">
+    <nav class="page-header__nav nav nav--closed nav--nojs">
+      <button class="nav__button nav__button--catalog" type="button">
+        <span class="visually-hidden">Открыть меню</span>
       </button>
-      <a class="page-header__logo logo" id="logo" href="#">
-         <svg class="logo__image" width="85" height="13" viewBox="0 0 85 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0.267489H1.98644L6.83569 9.98628L11.6849 0.267489H13.6714V12.7325H11.7434V3.86968L7.32256 12.7325H6.34882L1.90854 3.86968V12.7325H0V0.267489Z" fill="#122947" />
-            <path d="M20.7532 0.267489H22.6618L28.0953 12.7325H26.0699L24.7066 9.62963H18.6889L17.3646 12.7325H15.3197L20.7532 0.267489ZM24.1613 8.11385L21.7075 2.28258L19.2537 8.11385H24.1613Z" fill="#122947" />
-            <path d="M30.2393 0.267489H35.7118C37.1659 0.267489 38.2825 0.588477 39.0615 1.23045C39.8405 1.87243 40.23 2.81161 40.23 4.04801C40.23 4.96342 39.9638 5.74211 39.4315 6.38409C38.8992 7.01417 38.1461 7.44216 37.1724 7.66804L40.1715 12.7325H38.1072L35.2054 7.8107H32.2258V12.7325H30.2393V0.267489ZM35.3807 6.27709C36.2506 6.27709 36.9387 6.09282 37.445 5.72428C37.9644 5.34385 38.224 4.78509 38.224 4.04801C38.224 3.2396 37.9709 2.66301 37.4645 2.31824C36.9712 1.97348 36.2766 1.8011 35.3807 1.8011H32.2258V6.27709H35.3807Z" fill="#122947" />
-            <path d="M48.8651 13C47.5148 13 46.2944 12.7325 45.2038 12.1975C44.1132 11.6507 43.2563 10.8839 42.6331 9.89712C42.0099 8.91038 41.6983 7.78098 41.6983 6.50892C41.6983 5.23685 42.0099 4.10745 42.6331 3.12071C43.2563 2.13397 44.1132 1.36717 45.2038 0.820302C46.2944 0.273434 47.5148 0 48.8651 0C50.2154 0 51.4358 0.273434 52.5264 0.820302C53.617 1.36717 54.4739 2.13397 55.0971 3.12071C55.7203 4.10745 56.0319 5.23685 56.0319 6.50892C56.0319 7.78098 55.7203 8.91038 55.0971 9.89712C54.4739 10.8839 53.617 11.6507 52.5264 12.1975C51.4358 12.7325 50.2154 13 48.8651 13ZM48.8651 11.3594C49.8259 11.3594 50.6957 11.1632 51.4747 10.7709C52.2667 10.3667 52.8899 9.80201 53.3443 9.07682C53.7987 8.33974 54.0259 7.48377 54.0259 6.50892C54.0259 5.54595 53.7987 4.70188 53.3443 3.97668C52.9029 3.2396 52.2927 2.6749 51.5137 2.28258C50.7347 1.87837 49.8648 1.67627 48.904 1.67627C47.9303 1.67627 47.0474 1.87243 46.2555 2.26475C45.4765 2.65706 44.8533 3.22177 44.3859 3.95885C43.9314 4.69593 43.7042 5.54595 43.7042 6.50892C43.7042 7.48377 43.9314 8.33974 44.3859 9.07682C44.8403 9.80201 45.457 10.3667 46.236 10.7709C47.028 11.1632 47.9043 11.3594 48.8651 11.3594Z" fill="#122947" />
-            <path d="M64.8596 13C63.5093 13 62.2889 12.7325 61.1983 12.1975C60.1077 11.6507 59.2508 10.8839 58.6276 9.89712C58.0044 8.91038 57.6928 7.78098 57.6928 6.50892C57.6928 5.23685 58.0044 4.10745 58.6276 3.12071C59.2508 2.13397 60.1077 1.36717 61.1983 0.820302C62.2889 0.273434 63.5093 0 64.8596 0C66.2099 0 67.4303 0.273434 68.5209 0.820302C69.6115 1.36717 70.4684 2.13397 71.0916 3.12071C71.7148 4.10745 72.0264 5.23685 72.0264 6.50892C72.0264 7.78098 71.7148 8.91038 71.0916 9.89712C70.4684 10.8839 69.6115 11.6507 68.5209 12.1975C67.4303 12.7325 66.2099 13 64.8596 13ZM64.8596 11.3594C65.8204 11.3594 66.6902 11.1632 67.4692 10.7709C68.2612 10.3667 68.8844 9.80201 69.3388 9.07682C69.7933 8.33974 70.0205 7.48377 70.0205 6.50892C70.0205 5.54595 69.7933 4.70188 69.3388 3.97668C68.8974 3.2396 68.2872 2.6749 67.5082 2.28258C66.7292 1.87837 65.8593 1.67627 64.8986 1.67627C63.9248 1.67627 63.042 1.87243 62.25 2.26475C61.471 2.65706 60.8478 3.22177 60.3804 3.95885C59.926 4.69593 59.6988 5.54595 59.6988 6.50892C59.6988 7.48377 59.926 8.33974 60.3804 9.07682C60.8348 9.80201 61.4515 10.3667 62.2305 10.7709C63.0225 11.1632 63.8988 11.3594 64.8596 11.3594Z" fill="#122947" />
-            <path d="M74.172 0.267489H76.061L82.9941 9.6653V0.267489H85V12.7325H83.0915L76.1584 3.33471V12.7325H74.172V0.267489Z" fill="#122947" />
-         </svg>
-      </a>
-      <nav class="page-header__nav nav">
-         <a class="nav__login" href="#">
-            <span class="visually-hidden">Войти в профиль</span>
-            <svg class="nav__login-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M0 16C0 14.3834 0.68482 12.8331 1.90381 11.69C3.12279 10.5469 4.77609 9.90476 6.5 9.90476C8.22391 9.90476 9.87721 10.5469 11.0962 11.69C12.3152 12.8331 13 14.3834 13 16H11.375C11.375 14.7876 10.8614 13.6248 9.94715 12.7675C9.03291 11.9102 7.79293 11.4286 6.5 11.4286C5.20707 11.4286 3.96709 11.9102 3.05285 12.7675C2.13861 13.6248 1.625 14.7876 1.625 16H0ZM6.5 9.14286C3.80656 9.14286 1.625 7.09714 1.625 4.57143C1.625 2.04571 3.80656 0 6.5 0C9.19344 0 11.375 2.04571 11.375 4.57143C11.375 7.09714 9.19344 9.14286 6.5 9.14286ZM6.5 7.61905C8.29562 7.61905 9.75 6.25524 9.75 4.57143C9.75 2.88762 8.29562 1.52381 6.5 1.52381C4.70437 1.52381 3.25 2.88762 3.25 4.57143C3.25 6.25524 4.70437 7.61905 6.5 7.61905Z" fill="#122947" />
-            </svg>
-         </a>
-         <a class="nav__basket" href="#">
-            <span class="visually-hidden">Оформить покупки</span>
-            <svg class="nav__basket-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M3.11111 5.33333V3.80952C3.11111 2.79918 3.52083 1.83021 4.25014 1.11578C4.97945 0.401359 5.9686 0 7 0C8.0314 0 9.02055 0.401359 9.74986 1.11578C10.4792 1.83021 10.8889 2.79918 10.8889 3.80952V5.33333H13.2222C13.4285 5.33333 13.6263 5.41361 13.7722 5.55649C13.9181 5.69938 14 5.89317 14 6.09524V15.2381C14 15.4402 13.9181 15.634 13.7722 15.7768C13.6263 15.9197 13.4285 16 13.2222 16H0.777778C0.571498 16 0.373667 15.9197 0.227806 15.7768C0.0819442 15.634 0 15.4402 0 15.2381V6.09524C0 5.89317 0.0819442 5.69938 0.227806 5.55649C0.373667 5.41361 0.571498 5.33333 0.777778 5.33333H3.11111ZM3.11111 6.85714H1.55556V14.4762H12.4444V6.85714H10.8889V8.38095H9.33333V6.85714H4.66667V8.38095H3.11111V6.85714ZM4.66667 5.33333H9.33333V3.80952C9.33333 3.20331 9.0875 2.62193 8.64992 2.19328C8.21233 1.76463 7.61884 1.52381 7 1.52381C6.38116 1.52381 5.78767 1.76463 5.35008 2.19328C4.9125 2.62193 4.66667 3.20331 4.66667 3.80952V5.33333Z" fill="#122947" />
-            </svg>
-         </a>
-         <div class="nav__dropdown">
-            <ul class="nav-list">
-               <li class="nav-list__item">
-                  <a class="nav-list__link" href="catalog.html">Каталог</a>
-               </li>
-               <li class="nav-list__item"><a class="nav-list__link" href="#">О нас</a></li>
-               <li class="nav-list__item"><a class="nav-list__link" href="#">Контакты</a></li>
-            </ul>
-            <ul class="social-list">
-               <li class="social-list__item">
-                  <a class="social-list__link" href="http://facebook.com">
-                     <span class="visually-hidden">Мы в Фейсбуке</span>
-                     <svg class="social-list__link-icon" width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.28571 7H11L10.4762 9H6.28571V18H4.19048V9H0V7H4.19048V5.128C4.19048 3.345 4.38533 2.698 4.74991 2.046C5.10715 1.40181 5.65904 0.875009 6.3339 0.534C7.01695 0.186 7.69476 0 9.56267 0C10.1095 0 10.5893 0.0500001 11 0.15V2H9.56267C8.17562 2 7.75343 2.078 7.32286 2.298C7.00438 2.46 6.76762 2.686 6.59791 2.99C6.36743 3.401 6.28571 3.804 6.28571 5.128V7Z" fill="#122947" />
-                     </svg>
-                  </a>
-               </li>
-               <li class="social-list__item">
-                  <a class="social-list__link" href="http://instagram.com">
-                     <span class="visually-hidden">Мы в Инстаграмме</span>
-                     <svg class="social-list__link-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75ZM10 2C7.526 2 7.122 2.007 5.971 2.058C5.187 2.095 4.661 2.2 4.173 2.39C3.739 2.558 3.426 2.759 3.093 3.093C2.78001 3.3954 2.53935 3.76458 2.389 4.173C2.199 4.663 2.094 5.188 2.058 5.971C2.006 7.075 2 7.461 2 10C2 12.474 2.007 12.878 2.058 14.029C2.095 14.812 2.2 15.339 2.389 15.826C2.559 16.261 2.759 16.574 3.091 16.906C3.428 17.242 3.741 17.443 4.171 17.609C4.665 17.8 5.191 17.906 5.971 17.942C7.075 17.994 7.461 18 10 18C12.474 18 12.878 17.993 14.029 17.942C14.811 17.905 15.338 17.8 15.826 17.611C16.259 17.442 16.574 17.241 16.906 16.909C17.243 16.572 17.444 16.259 17.61 15.829C17.8 15.336 17.906 14.809 17.942 14.029C17.994 12.925 18 12.539 18 10C18 7.526 17.993 7.122 17.942 5.971C17.905 5.189 17.8 4.661 17.61 4.173C17.4593 3.765 17.2191 3.39596 16.907 3.093C16.6047 2.77985 16.2355 2.53917 15.827 2.389C15.337 2.199 14.811 2.094 14.029 2.058C12.925 2.006 12.539 2 10 2ZM10 0C12.717 0 13.056 0.00999994 14.122 0.0599999C15.187 0.11 15.912 0.277 16.55 0.525C17.21 0.779 17.766 1.123 18.322 1.678C18.8305 2.1779 19.224 2.78259 19.475 3.45C19.722 4.087 19.89 4.813 19.94 5.878C19.987 6.944 20 7.283 20 10C20 12.717 19.99 13.056 19.94 14.122C19.89 15.187 19.722 15.912 19.475 16.55C19.2247 17.2178 18.8311 17.8226 18.322 18.322C17.822 18.8303 17.2173 19.2238 16.55 19.475C15.913 19.722 15.187 19.89 14.122 19.94C13.056 19.987 12.717 20 10 20C7.283 20 6.944 19.99 5.878 19.94C4.813 19.89 4.088 19.722 3.45 19.475C2.78233 19.2245 2.17753 18.8309 1.678 18.322C1.16941 17.8222 0.775931 17.2175 0.525 16.55C0.277 15.913 0.11 15.187 0.0599999 14.122C0.0129999 13.056 0 12.717 0 10C0 7.283 0.00999994 6.944 0.0599999 5.878C0.11 4.812 0.277 4.088 0.525 3.45C0.775236 2.78218 1.1688 2.17732 1.678 1.678C2.17767 1.16923 2.78243 0.775729 3.45 0.525C4.088 0.277 4.812 0.11 5.878 0.0599999C6.944 0.0129999 7.283 0 10 0Z" fill="#122947" />
-                     </svg>
-                  </a>
-               </li>
-               <li class="social-list__item">
-                  <a class="social-list__link" href="http://twitter.com">
-                     <span class="visually-hidden">Мы в Твиттере</span>
-                     <svg class="social-list__link-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.8641 2.04374C13.1063 2.04361 12.3787 2.34819 11.838 2.89193C11.2972 3.43567 10.9865 4.17511 10.9726 4.95114L10.9447 6.55955C10.9431 6.6459 10.9236 6.73093 10.8877 6.80905C10.8517 6.88717 10.8 6.95662 10.736 7.01284C10.6719 7.06906 10.597 7.11078 10.5162 7.13527C10.4353 7.15975 10.3503 7.16645 10.2667 7.15491L8.71031 6.93842C6.66235 6.65248 4.70013 5.68641 2.81769 4.08004C2.22145 7.46026 3.38601 9.8019 6.19074 11.6084L7.9326 12.7297C8.01536 12.783 8.08412 12.8562 8.13286 12.943C8.18159 13.0298 8.20882 13.1275 8.21217 13.2275C8.21551 13.3276 8.19487 13.427 8.15204 13.517C8.10922 13.607 8.04551 13.6848 7.9665 13.7438L6.37918 14.9315C7.3234 14.9917 8.21975 14.9488 8.96356 14.7977C13.6677 13.8357 16.7955 10.2104 16.7955 4.23016C16.7955 3.74202 15.7864 2.04374 13.8641 2.04374ZM8.97851 4.91335C8.99592 3.92895 9.29646 2.97169 9.84252 2.16141C10.3886 1.35113 11.1559 0.723842 12.0484 0.358092C12.9409 -0.00765845 13.9188 -0.0956204 14.8599 0.105219C15.801 0.306059 16.6633 0.786775 17.3389 1.48718C18.0478 1.48207 18.651 1.66589 20 0.828497C19.666 2.50329 19.5015 3.23039 18.7896 4.23016C18.7896 12.0343 14.1064 15.8291 9.3544 16.8003C6.09602 17.4661 1.35799 16.3724 0 14.9202C0.691959 14.8651 3.50366 14.5556 5.12887 13.3373C3.75393 12.4091 -1.71893 9.11054 1.87746 0.24232C3.56548 2.26126 5.27743 3.63581 7.01231 4.36496C8.16691 4.85003 8.45007 4.83982 8.97951 4.91437L8.97851 4.91335Z" fill="#122947" />
-                     </svg>
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </nav>
-
-   </header>
-   <main class="page-catalog">
-      <h1 class="visually-hidden">Добро пожаловать на страницу каталога сайта Maroon</h1>
-      <section class="filter">
-         <h2 class="filter__title">Каталог</h2>
-         <button class="filter__button button" type="button">
-            <span class="button__text"></span>
-            Фильтр</button>
-         <form class="filter__form form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="form__fieldset fieldset">
-               <legend class="fieldset__title">Уход для лица</legend>
-               <ul class="fieldset__list fieldset-list">
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Крема" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Крема</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Сыворотки" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Сыворотки</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Маски" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Маски</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Пенки">
-                        <span class="control__mark"></span>
-                        <span class="control__label">Пенки</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Тоники">
-                        <span class="control__mark"></span>
-                        <span class="control__label">Тоники</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Пудры" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Пудры</span>
-                     </label>
-                  </li>
-               </ul>
-            </fieldset>
-            <fieldset class="form__fieldset fieldset">
-               <legend class="fieldset__title">Уход для тела</legend>
-               <ul class="fieldset__list fieldset-list">
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Крема">
-                        <span class="control__mark"></span>
-                        <span class="control__label">Крема</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Масла" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Масла</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Скрабы">
-                        <span class="control__mark"></span>
-                        <span class="control__label">Скрабы</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Мыло" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Мыло</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Бомбочки для ванны" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Бомбочки для ванны</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Соль для ванны">
-                        <span class="control__mark"></span>
-                        <span class="control__label">Соль для ванны</span>
-                     </label>
-                  </li>
-               </ul>
-            </fieldset>
-            <fieldset class="form__fieldset fieldset">
-               <legend class="fieldset__title">Тип кожи</legend>
-               <ul class="fieldset__list fieldset-list">
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Нормальная">
-                        <span class="control__mark"></span>
-                        <span class="control__label">Нормальная</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Сухая" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Сухая</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Жирная">
-                        <span class="control__mark"></span>
-                        <span class="control__label">Жирная</span>
-                     </label>
-                  </li>
-                  <li class="fieldset-list__item">
-                     <label class="fieldset-list__item-control control">
-                        <input class="visually-hidden control__input" type="checkbox" name="Комбинированная" checked>
-                        <span class="control__mark"></span>
-                        <span class="control__label">Комбинированная</span>
-                     </label>
-                  </li>
-               </ul>
-            </fieldset>
-            <button class="form__button button" type="submit">
-               <span class="button__text">Применить</span>
-            </button>
-            <button class="form__button button" type="reset">
-               <span class="button__text">Сбросить</span>
-            </button>
-         </form>
-      </section>
-      <section class="product">
-         <h2 class="visually-hidden">Товары</h2>
-         <ul class="product__list product-list">
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/high-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">High</h3>
-                  <h4 class="product-list__item-subtitle">крем для лица</h4>
-                  <p class="product-list__item-price">990 &#8381;</p>
-                  <p class="product-list__item-volume">50ml</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/rest-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Rest</h3>
-                  <h4 class="product-list__item-subtitle">минеральная пудра</h4>
-                  <p class="product-list__item-price">690 &#8381;</p>
-                  <p class="product-list__item-volume">20g</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="card.html">
-                  <img class="product-list__item-image" src="img/rose-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Rose</h3>
-                  <h4 class="product-list__item-subtitle">крем для лица</h4>
-                  <p class="product-list__item-price">890 &#8381;</p>
-                  <p class="product-list__item-volume">50ml</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/milk-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Milk</h3>
-                  <h4 class="product-list__item-subtitle">масло для тела</h4>
-                  <p class="product-list__item-price">790 &#8381;</p>
-                  <p class="product-list__item-volume">150ml</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/paradise-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Paradise</h3>
-                  <h4 class="product-list__item-subtitle">минеральная пудра</h4>
-                  <p class="product-list__item-price">590 &#8381;</p>
-                  <p class="product-list__item-volume">15g</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/sun-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Sun</h3>
-                  <h4 class="product-list__item-subtitle">бомбочка для ванны</h4>
-                  <p class="product-list__item-price">90 &#8381;</p>
-                  <p class="product-list__item-volume">20g</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/violet-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Violet</h3>
-                  <h4 class="product-list__item-subtitle">крем для лица</h4>
-                  <p class="product-list__item-price">890 &#8381;</p>
-                  <p class="product-list__item-volume">50ml</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/clean-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Clean</h3>
-                  <h4 class="product-list__item-subtitle">маска для лица</h4>
-                  <p class="product-list__item-price">490 &#8381;</p>
-                  <p class="product-list__item-volume">100g</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/coconut-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Coconut</h3>
-                  <h4 class="product-list__item-subtitle">масло для тела</h4>
-                  <p class="product-list__item-price">990 &#8381;</p>
-                  <p class="product-list__item-volume">300ml</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/lavender-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Lavender</h3>
-                  <h4 class="product-list__item-subtitle">мыло ручной работы</h4>
-                  <p class="product-list__item-price">290 &#8381;</p>
-                  <p class="product-list__item-volume">50g</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/lotos-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Lotos</h3>
-                  <h4 class="product-list__item-subtitle">маска для лица</h4>
-                  <p class="product-list__item-price">890 &#8381;</p>
-                  <p class="product-list__item-volume">50ml</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/earth-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Earth</h3>
-                  <h4 class="product-list__item-subtitle">бомбочка для ванны</h4>
-                  <p class="product-list__item-price">90 &#8381;</p>
-                  <p class="product-list__item-volume">20g</p>
-               </a>
-            </li>
-         </ul>
-         <div class="pagination">
-            <div class="pagination__page">
-               <a class="pagination__page-number" href="#">1</a>
-               <span class="pagination__page-separator"></span>
-               <a class="pagination__page-number" href="#">3</a>
-            </div>
-            <div class="pagination__controls pagination-controls">
-               <button class="pagination-controls__button">
-                  <svg class="pagination-controls__image" width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M25 6.5H0.999999M0.999999 6.5L6.81818 1M0.999999 6.5L6.81818 12" stroke="#122947" />
-                  </svg>
-                  <span class="visually-hidden">Предыдущая страница</span>
-               </button>
-               <button class="pagination-controls__button">
-                  <svg class="pagination-controls__image" width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M0 6.5H24M24 6.5L18.1818 1M24 6.5L18.1818 12" stroke="#122947" />
-                  </svg>
-                  <span class="visually-hidden">Следующая страница</span>
-               </button>
-            </div>
-         </div>
-      </section>
-      <section class="recently-viewed">
-         <h2 class="recently-viewed__title">Вы недавно смотрели</h2>
-         <ul class="recently-viewed__list product-list">
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/clean-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Clean</h3>
-                  <h4 class="product-list__item-subtitle">маска для лица</h4>
-                  <p class="product-list__item-price">490 &#8381;</p>
-                  <p class="product-list__item-volume">100g</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/lotos-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Lotos</h3>
-                  <h4 class="product-list__item-subtitle">маска для лица</h4>
-                  <p class="product-list__item-price">890 &#8381;</p>
-                  <p class="product-list__item-volume">50ml</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/lavender-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Lavender</h3>
-                  <h4 class="product-list__item-subtitle">мыло ручной работы</h4>
-                  <p class="product-list__item-price">290 &#8381;</p>
-                  <p class="product-list__item-volume">50g</p>
-               </a>
-            </li>
-            <li class="product-list__item">
-               <a class="product-list__item-link" href="#">
-                  <img class="product-list__item-image" src="img/coconut-mobile.jpg" width="290" height="290" alt="">
-                  <h3 class="product-list__item-title">Coconut</h3>
-                  <h4 class="product-list__item-subtitle">масло для тела</h4>
-                  <p class="product-list__item-price">990 &#8381;</p>
-                  <p class="product-list__item-volume">300ml</p>
-               </a>
-            </li>
-         </ul>
-         <div class="recently-viewed__controls pagination-controls">
-            <button class="pagination-controls__button">
-               <svg class="pagination-controls__image" width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M25 6.5H0.999999M0.999999 6.5L6.81818 1M0.999999 6.5L6.81818 12" stroke="#122947" />
-               </svg>
-               <span class="visually-hidden">Предыдущая страница</span>
-            </button>
-            <button class="pagination-controls__button">
-               <svg class="pagination-controls__image" width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 6.5H24M24 6.5L18.1818 1M24 6.5L18.1818 12" stroke="#122947" />
-               </svg>
-               <span class="visually-hidden">Следующая страница</span>
-            </button>
-         </div>
-      </section>
-      <section class="subscribe">
-         <h2 class="subscribe__title">Присоединяйтесь к нам</h2>
-         <p class="subscribe__description description">Подпишитесь на наш аккаунт @marooncare и узнавайте о новиках и акциях первыми</p>
-         <a class="subscribe__link button" href="#">
-            <span class="button__text">Подписаться</span>
-         </a>
-      </section>
-      <section class="contacts">
-         <h2 class="contacts__title">Контакты</h2>
-
-         <address class="contacts__wrapper">
-            <p class="contacts__subtitle">Адрес</p>
-            <p class="contacts__text">Санкт-Петербург, ул. Большая Конюшенная, 19</p>
-         </address>
-         <address class="contacts__wrapper">
-            <p class="contacts__subtitle">Телефон</p>
-            <a class="contacts__text" href="tel:89238889060">+7 (923) 888-90-60</a>
-         </address>
-         <address class="contacts__wrapper">
-            <p class="contacts__subtitle">E-mail</p>
-            <a class="contacts__text" href="mailto:info@maroon.ru">info@maroon.ru</a>
-         </address>
-         <ul class="social-list">
-            <li class="social-list__item">
-               <a class="social-list__link" href="http://facebook.com">
-                  <span class="visually-hidden">Мы в Фейсбуке</span>
-                  <svg class="social-list__link-icon" width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M6.28571 7H11L10.4762 9H6.28571V18H4.19048V9H0V7H4.19048V5.128C4.19048 3.345 4.38533 2.698 4.74991 2.046C5.10715 1.40181 5.65904 0.875009 6.3339 0.534C7.01695 0.186 7.69476 0 9.56267 0C10.1095 0 10.5893 0.0500001 11 0.15V2H9.56267C8.17562 2 7.75343 2.078 7.32286 2.298C7.00438 2.46 6.76762 2.686 6.59791 2.99C6.36743 3.401 6.28571 3.804 6.28571 5.128V7Z" fill="#122947" />
-                  </svg>
-               </a>
-            </li>
-            <li class="social-list__item">
-               <a class="social-list__link" href="http://instagram.com">
-                  <span class="visually-hidden">Мы в Инстаграмме</span>
-                  <svg class="social-list__link-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75ZM10 2C7.526 2 7.122 2.007 5.971 2.058C5.187 2.095 4.661 2.2 4.173 2.39C3.739 2.558 3.426 2.759 3.093 3.093C2.78001 3.3954 2.53935 3.76458 2.389 4.173C2.199 4.663 2.094 5.188 2.058 5.971C2.006 7.075 2 7.461 2 10C2 12.474 2.007 12.878 2.058 14.029C2.095 14.812 2.2 15.339 2.389 15.826C2.559 16.261 2.759 16.574 3.091 16.906C3.428 17.242 3.741 17.443 4.171 17.609C4.665 17.8 5.191 17.906 5.971 17.942C7.075 17.994 7.461 18 10 18C12.474 18 12.878 17.993 14.029 17.942C14.811 17.905 15.338 17.8 15.826 17.611C16.259 17.442 16.574 17.241 16.906 16.909C17.243 16.572 17.444 16.259 17.61 15.829C17.8 15.336 17.906 14.809 17.942 14.029C17.994 12.925 18 12.539 18 10C18 7.526 17.993 7.122 17.942 5.971C17.905 5.189 17.8 4.661 17.61 4.173C17.4593 3.765 17.2191 3.39596 16.907 3.093C16.6047 2.77985 16.2355 2.53917 15.827 2.389C15.337 2.199 14.811 2.094 14.029 2.058C12.925 2.006 12.539 2 10 2ZM10 0C12.717 0 13.056 0.00999994 14.122 0.0599999C15.187 0.11 15.912 0.277 16.55 0.525C17.21 0.779 17.766 1.123 18.322 1.678C18.8305 2.1779 19.224 2.78259 19.475 3.45C19.722 4.087 19.89 4.813 19.94 5.878C19.987 6.944 20 7.283 20 10C20 12.717 19.99 13.056 19.94 14.122C19.89 15.187 19.722 15.912 19.475 16.55C19.2247 17.2178 18.8311 17.8226 18.322 18.322C17.822 18.8303 17.2173 19.2238 16.55 19.475C15.913 19.722 15.187 19.89 14.122 19.94C13.056 19.987 12.717 20 10 20C7.283 20 6.944 19.99 5.878 19.94C4.813 19.89 4.088 19.722 3.45 19.475C2.78233 19.2245 2.17753 18.8309 1.678 18.322C1.16941 17.8222 0.775931 17.2175 0.525 16.55C0.277 15.913 0.11 15.187 0.0599999 14.122C0.0129999 13.056 0 12.717 0 10C0 7.283 0.00999994 6.944 0.0599999 5.878C0.11 4.812 0.277 4.088 0.525 3.45C0.775236 2.78218 1.1688 2.17732 1.678 1.678C2.17767 1.16923 2.78243 0.775729 3.45 0.525C4.088 0.277 4.812 0.11 5.878 0.0599999C6.944 0.0129999 7.283 0 10 0Z" fill="#122947" />
-                  </svg>
-               </a>
-            </li>
-            <li class="social-list__item">
-               <a class="social-list__link" href="http://twitter.com">
-                  <span class="visually-hidden">Мы в Твиттере</span>
-                  <svg class="social-list__link-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M13.8641 2.04374C13.1063 2.04361 12.3787 2.34819 11.838 2.89193C11.2972 3.43567 10.9865 4.17511 10.9726 4.95114L10.9447 6.55955C10.9431 6.6459 10.9236 6.73093 10.8877 6.80905C10.8517 6.88717 10.8 6.95662 10.736 7.01284C10.6719 7.06906 10.597 7.11078 10.5162 7.13527C10.4353 7.15975 10.3503 7.16645 10.2667 7.15491L8.71031 6.93842C6.66235 6.65248 4.70013 5.68641 2.81769 4.08004C2.22145 7.46026 3.38601 9.8019 6.19074 11.6084L7.9326 12.7297C8.01536 12.783 8.08412 12.8562 8.13286 12.943C8.18159 13.0298 8.20882 13.1275 8.21217 13.2275C8.21551 13.3276 8.19487 13.427 8.15204 13.517C8.10922 13.607 8.04551 13.6848 7.9665 13.7438L6.37918 14.9315C7.3234 14.9917 8.21975 14.9488 8.96356 14.7977C13.6677 13.8357 16.7955 10.2104 16.7955 4.23016C16.7955 3.74202 15.7864 2.04374 13.8641 2.04374ZM8.97851 4.91335C8.99592 3.92895 9.29646 2.97169 9.84252 2.16141C10.3886 1.35113 11.1559 0.723842 12.0484 0.358092C12.9409 -0.00765845 13.9188 -0.0956204 14.8599 0.105219C15.801 0.306059 16.6633 0.786775 17.3389 1.48718C18.0478 1.48207 18.651 1.66589 20 0.828497C19.666 2.50329 19.5015 3.23039 18.7896 4.23016C18.7896 12.0343 14.1064 15.8291 9.3544 16.8003C6.09602 17.4661 1.35799 16.3724 0 14.9202C0.691959 14.8651 3.50366 14.5556 5.12887 13.3373C3.75393 12.4091 -1.71893 9.11054 1.87746 0.24232C3.56548 2.26126 5.27743 3.63581 7.01231 4.36496C8.16691 4.85003 8.45007 4.83982 8.97951 4.91437L8.97851 4.91335Z" fill="#122947" />
-                  </svg>
-               </a>
-            </li>
-         </ul>
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1656349316066!5m2!1sen!2sru" width="290" height="281" style="border:0;" loading="lazy" title="Офис в Санкт-Петербурге" allowfullscreen=""></iframe>
-         <img class="contacts__image-map" src="img/contacts-map-mobile.jpg" width="290" height="281" alt="Россия, Санкт-Петербург, ул. Большая Конюшенная, 19">
-      </section>
-   </main>
-   <footer class="page-footer">
-      <a class="page-footer__logo logo" href="#logo">
-         <svg class="logo__image" width="85" height="13" viewBox="0 0 85 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0.267489H1.98644L6.83569 9.98628L11.6849 0.267489H13.6714V12.7325H11.7434V3.86968L7.32256 12.7325H6.34882L1.90854 3.86968V12.7325H0V0.267489Z" fill="#122947" />
-            <path d="M20.7532 0.267489H22.6618L28.0953 12.7325H26.0699L24.7066 9.62963H18.6889L17.3646 12.7325H15.3197L20.7532 0.267489ZM24.1613 8.11385L21.7075 2.28258L19.2537 8.11385H24.1613Z" fill="#122947" />
-            <path d="M30.2393 0.267489H35.7118C37.1659 0.267489 38.2825 0.588477 39.0615 1.23045C39.8405 1.87243 40.23 2.81161 40.23 4.04801C40.23 4.96342 39.9638 5.74211 39.4315 6.38409C38.8992 7.01417 38.1461 7.44216 37.1724 7.66804L40.1715 12.7325H38.1072L35.2054 7.8107H32.2258V12.7325H30.2393V0.267489ZM35.3807 6.27709C36.2506 6.27709 36.9387 6.09282 37.445 5.72428C37.9644 5.34385 38.224 4.78509 38.224 4.04801C38.224 3.2396 37.9709 2.66301 37.4645 2.31824C36.9712 1.97348 36.2766 1.8011 35.3807 1.8011H32.2258V6.27709H35.3807Z" fill="#122947" />
-            <path d="M48.8651 13C47.5148 13 46.2944 12.7325 45.2038 12.1975C44.1132 11.6507 43.2563 10.8839 42.6331 9.89712C42.0099 8.91038 41.6983 7.78098 41.6983 6.50892C41.6983 5.23685 42.0099 4.10745 42.6331 3.12071C43.2563 2.13397 44.1132 1.36717 45.2038 0.820302C46.2944 0.273434 47.5148 0 48.8651 0C50.2154 0 51.4358 0.273434 52.5264 0.820302C53.617 1.36717 54.4739 2.13397 55.0971 3.12071C55.7203 4.10745 56.0319 5.23685 56.0319 6.50892C56.0319 7.78098 55.7203 8.91038 55.0971 9.89712C54.4739 10.8839 53.617 11.6507 52.5264 12.1975C51.4358 12.7325 50.2154 13 48.8651 13ZM48.8651 11.3594C49.8259 11.3594 50.6957 11.1632 51.4747 10.7709C52.2667 10.3667 52.8899 9.80201 53.3443 9.07682C53.7987 8.33974 54.0259 7.48377 54.0259 6.50892C54.0259 5.54595 53.7987 4.70188 53.3443 3.97668C52.9029 3.2396 52.2927 2.6749 51.5137 2.28258C50.7347 1.87837 49.8648 1.67627 48.904 1.67627C47.9303 1.67627 47.0474 1.87243 46.2555 2.26475C45.4765 2.65706 44.8533 3.22177 44.3859 3.95885C43.9314 4.69593 43.7042 5.54595 43.7042 6.50892C43.7042 7.48377 43.9314 8.33974 44.3859 9.07682C44.8403 9.80201 45.457 10.3667 46.236 10.7709C47.028 11.1632 47.9043 11.3594 48.8651 11.3594Z" fill="#122947" />
-            <path d="M64.8596 13C63.5093 13 62.2889 12.7325 61.1983 12.1975C60.1077 11.6507 59.2508 10.8839 58.6276 9.89712C58.0044 8.91038 57.6928 7.78098 57.6928 6.50892C57.6928 5.23685 58.0044 4.10745 58.6276 3.12071C59.2508 2.13397 60.1077 1.36717 61.1983 0.820302C62.2889 0.273434 63.5093 0 64.8596 0C66.2099 0 67.4303 0.273434 68.5209 0.820302C69.6115 1.36717 70.4684 2.13397 71.0916 3.12071C71.7148 4.10745 72.0264 5.23685 72.0264 6.50892C72.0264 7.78098 71.7148 8.91038 71.0916 9.89712C70.4684 10.8839 69.6115 11.6507 68.5209 12.1975C67.4303 12.7325 66.2099 13 64.8596 13ZM64.8596 11.3594C65.8204 11.3594 66.6902 11.1632 67.4692 10.7709C68.2612 10.3667 68.8844 9.80201 69.3388 9.07682C69.7933 8.33974 70.0205 7.48377 70.0205 6.50892C70.0205 5.54595 69.7933 4.70188 69.3388 3.97668C68.8974 3.2396 68.2872 2.6749 67.5082 2.28258C66.7292 1.87837 65.8593 1.67627 64.8986 1.67627C63.9248 1.67627 63.042 1.87243 62.25 2.26475C61.471 2.65706 60.8478 3.22177 60.3804 3.95885C59.926 4.69593 59.6988 5.54595 59.6988 6.50892C59.6988 7.48377 59.926 8.33974 60.3804 9.07682C60.8348 9.80201 61.4515 10.3667 62.2305 10.7709C63.0225 11.1632 63.8988 11.3594 64.8596 11.3594Z" fill="#122947" />
-            <path d="M74.172 0.267489H76.061L82.9941 9.6653V0.267489H85V12.7325H83.0915L76.1584 3.33471V12.7325H74.172V0.267489Z" fill="#122947" />
-         </svg>
-      </a>
-      <ul class="page-footer__list footer-list">
-         <li class="footer-list__item">
-            <a class="footer-list__link" href="catalog.html">Каталог</a>
-         </li>
-         <li class="footer-list__item">
-            <a class="footer-list__link" href="#">О нас</a>
-         </li>
-         <li class="footer-list__item">
-            <a class="footer-list__link" href="#">Магазины</a>
-         </li>
-         <li class="footer-list__item">
-            <a class="footer-list__link" href="#">Контакты</a>
-         </li>
-      </ul>
-      <ul class="social-list">
-         <li class="social-list__item">
+      <div class="nav__dropdown nav__dropdown--catalog">
+        <ul class="nav-list nav-list--catalog">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">О нас</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="social-list social-list--menu">
+          <li class="social-list__item">
             <a class="social-list__link" href="http://facebook.com">
-               <span class="visually-hidden">Мы в Фейсбуке</span>
-               <svg class="social-list__link-icon" width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.28571 7H11L10.4762 9H6.28571V18H4.19048V9H0V7H4.19048V5.128C4.19048 3.345 4.38533 2.698 4.74991 2.046C5.10715 1.40181 5.65904 0.875009 6.3339 0.534C7.01695 0.186 7.69476 0 9.56267 0C10.1095 0 10.5893 0.0500001 11 0.15V2H9.56267C8.17562 2 7.75343 2.078 7.32286 2.298C7.00438 2.46 6.76762 2.686 6.59791 2.99C6.36743 3.401 6.28571 3.804 6.28571 5.128V7Z" fill="#122947" />
-               </svg>
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="social-list__link-icon" width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.28571 7H11L10.4762 9H6.28571V18H4.19048V9H0V7H4.19048V5.128C4.19048 3.345 4.38533 2.698 4.74991 2.046C5.10715 1.40181 5.65904 0.875009 6.3339 0.534C7.01695 0.186 7.69476 0 9.56267 0C10.1095 0 10.5893 0.0500001 11 0.15V2H9.56267C8.17562 2 7.75343 2.078 7.32286 2.298C7.00438 2.46 6.76762 2.686 6.59791 2.99C6.36743 3.401 6.28571 3.804 6.28571 5.128V7Z" fill="#122947" />
+              </svg>
             </a>
-         </li>
-         <li class="social-list__item">
+          </li>
+          <li class="social-list__item">
             <a class="social-list__link" href="http://instagram.com">
-               <span class="visually-hidden">Мы в Инстаграмме</span>
-               <svg class="social-list__link-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75ZM10 2C7.526 2 7.122 2.007 5.971 2.058C5.187 2.095 4.661 2.2 4.173 2.39C3.739 2.558 3.426 2.759 3.093 3.093C2.78001 3.3954 2.53935 3.76458 2.389 4.173C2.199 4.663 2.094 5.188 2.058 5.971C2.006 7.075 2 7.461 2 10C2 12.474 2.007 12.878 2.058 14.029C2.095 14.812 2.2 15.339 2.389 15.826C2.559 16.261 2.759 16.574 3.091 16.906C3.428 17.242 3.741 17.443 4.171 17.609C4.665 17.8 5.191 17.906 5.971 17.942C7.075 17.994 7.461 18 10 18C12.474 18 12.878 17.993 14.029 17.942C14.811 17.905 15.338 17.8 15.826 17.611C16.259 17.442 16.574 17.241 16.906 16.909C17.243 16.572 17.444 16.259 17.61 15.829C17.8 15.336 17.906 14.809 17.942 14.029C17.994 12.925 18 12.539 18 10C18 7.526 17.993 7.122 17.942 5.971C17.905 5.189 17.8 4.661 17.61 4.173C17.4593 3.765 17.2191 3.39596 16.907 3.093C16.6047 2.77985 16.2355 2.53917 15.827 2.389C15.337 2.199 14.811 2.094 14.029 2.058C12.925 2.006 12.539 2 10 2ZM10 0C12.717 0 13.056 0.00999994 14.122 0.0599999C15.187 0.11 15.912 0.277 16.55 0.525C17.21 0.779 17.766 1.123 18.322 1.678C18.8305 2.1779 19.224 2.78259 19.475 3.45C19.722 4.087 19.89 4.813 19.94 5.878C19.987 6.944 20 7.283 20 10C20 12.717 19.99 13.056 19.94 14.122C19.89 15.187 19.722 15.912 19.475 16.55C19.2247 17.2178 18.8311 17.8226 18.322 18.322C17.822 18.8303 17.2173 19.2238 16.55 19.475C15.913 19.722 15.187 19.89 14.122 19.94C13.056 19.987 12.717 20 10 20C7.283 20 6.944 19.99 5.878 19.94C4.813 19.89 4.088 19.722 3.45 19.475C2.78233 19.2245 2.17753 18.8309 1.678 18.322C1.16941 17.8222 0.775931 17.2175 0.525 16.55C0.277 15.913 0.11 15.187 0.0599999 14.122C0.0129999 13.056 0 12.717 0 10C0 7.283 0.00999994 6.944 0.0599999 5.878C0.11 4.812 0.277 4.088 0.525 3.45C0.775236 2.78218 1.1688 2.17732 1.678 1.678C2.17767 1.16923 2.78243 0.775729 3.45 0.525C4.088 0.277 4.812 0.11 5.878 0.0599999C6.944 0.0129999 7.283 0 10 0Z" fill="#122947" />
-               </svg>
+              <span class="visually-hidden">Мы в Инстаграмме</span>
+              <svg class="social-list__link-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75ZM10 2C7.526 2 7.122 2.007 5.971 2.058C5.187 2.095 4.661 2.2 4.173 2.39C3.739 2.558 3.426 2.759 3.093 3.093C2.78001 3.3954 2.53935 3.76458 2.389 4.173C2.199 4.663 2.094 5.188 2.058 5.971C2.006 7.075 2 7.461 2 10C2 12.474 2.007 12.878 2.058 14.029C2.095 14.812 2.2 15.339 2.389 15.826C2.559 16.261 2.759 16.574 3.091 16.906C3.428 17.242 3.741 17.443 4.171 17.609C4.665 17.8 5.191 17.906 5.971 17.942C7.075 17.994 7.461 18 10 18C12.474 18 12.878 17.993 14.029 17.942C14.811 17.905 15.338 17.8 15.826 17.611C16.259 17.442 16.574 17.241 16.906 16.909C17.243 16.572 17.444 16.259 17.61 15.829C17.8 15.336 17.906 14.809 17.942 14.029C17.994 12.925 18 12.539 18 10C18 7.526 17.993 7.122 17.942 5.971C17.905 5.189 17.8 4.661 17.61 4.173C17.4593 3.765 17.2191 3.39596 16.907 3.093C16.6047 2.77985 16.2355 2.53917 15.827 2.389C15.337 2.199 14.811 2.094 14.029 2.058C12.925 2.006 12.539 2 10 2ZM10 0C12.717 0 13.056 0.00999994 14.122 0.0599999C15.187 0.11 15.912 0.277 16.55 0.525C17.21 0.779 17.766 1.123 18.322 1.678C18.8305 2.1779 19.224 2.78259 19.475 3.45C19.722 4.087 19.89 4.813 19.94 5.878C19.987 6.944 20 7.283 20 10C20 12.717 19.99 13.056 19.94 14.122C19.89 15.187 19.722 15.912 19.475 16.55C19.2247 17.2178 18.8311 17.8226 18.322 18.322C17.822 18.8303 17.2173 19.2238 16.55 19.475C15.913 19.722 15.187 19.89 14.122 19.94C13.056 19.987 12.717 20 10 20C7.283 20 6.944 19.99 5.878 19.94C4.813 19.89 4.088 19.722 3.45 19.475C2.78233 19.2245 2.17753 18.8309 1.678 18.322C1.16941 17.8222 0.775931 17.2175 0.525 16.55C0.277 15.913 0.11 15.187 0.0599999 14.122C0.0129999 13.056 0 12.717 0 10C0 7.283 0.00999994 6.944 0.0599999 5.878C0.11 4.812 0.277 4.088 0.525 3.45C0.775236 2.78218 1.1688 2.17732 1.678 1.678C2.17767 1.16923 2.78243 0.775729 3.45 0.525C4.088 0.277 4.812 0.11 5.878 0.0599999C6.944 0.0129999 7.283 0 10 0Z" fill="#122947" />
+              </svg>
             </a>
-         </li>
-         <li class="social-list__item">
+          </li>
+          <li class="social-list__item">
             <a class="social-list__link" href="http://twitter.com">
-               <span class="visually-hidden">Мы в Твиттере</span>
-               <svg class="social-list__link-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.8641 2.04374C13.1063 2.04361 12.3787 2.34819 11.838 2.89193C11.2972 3.43567 10.9865 4.17511 10.9726 4.95114L10.9447 6.55955C10.9431 6.6459 10.9236 6.73093 10.8877 6.80905C10.8517 6.88717 10.8 6.95662 10.736 7.01284C10.6719 7.06906 10.597 7.11078 10.5162 7.13527C10.4353 7.15975 10.3503 7.16645 10.2667 7.15491L8.71031 6.93842C6.66235 6.65248 4.70013 5.68641 2.81769 4.08004C2.22145 7.46026 3.38601 9.8019 6.19074 11.6084L7.9326 12.7297C8.01536 12.783 8.08412 12.8562 8.13286 12.943C8.18159 13.0298 8.20882 13.1275 8.21217 13.2275C8.21551 13.3276 8.19487 13.427 8.15204 13.517C8.10922 13.607 8.04551 13.6848 7.9665 13.7438L6.37918 14.9315C7.3234 14.9917 8.21975 14.9488 8.96356 14.7977C13.6677 13.8357 16.7955 10.2104 16.7955 4.23016C16.7955 3.74202 15.7864 2.04374 13.8641 2.04374ZM8.97851 4.91335C8.99592 3.92895 9.29646 2.97169 9.84252 2.16141C10.3886 1.35113 11.1559 0.723842 12.0484 0.358092C12.9409 -0.00765845 13.9188 -0.0956204 14.8599 0.105219C15.801 0.306059 16.6633 0.786775 17.3389 1.48718C18.0478 1.48207 18.651 1.66589 20 0.828497C19.666 2.50329 19.5015 3.23039 18.7896 4.23016C18.7896 12.0343 14.1064 15.8291 9.3544 16.8003C6.09602 17.4661 1.35799 16.3724 0 14.9202C0.691959 14.8651 3.50366 14.5556 5.12887 13.3373C3.75393 12.4091 -1.71893 9.11054 1.87746 0.24232C3.56548 2.26126 5.27743 3.63581 7.01231 4.36496C8.16691 4.85003 8.45007 4.83982 8.97951 4.91437L8.97851 4.91335Z" fill="#122947" />
-               </svg>
+              <span class="visually-hidden">Мы в Твиттере</span>
+              <svg class="social-list__link-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.8641 2.04374C13.1063 2.04361 12.3787 2.34819 11.838 2.89193C11.2972 3.43567 10.9865 4.17511 10.9726 4.95114L10.9447 6.55955C10.9431 6.6459 10.9236 6.73093 10.8877 6.80905C10.8517 6.88717 10.8 6.95662 10.736 7.01284C10.6719 7.06906 10.597 7.11078 10.5162 7.13527C10.4353 7.15975 10.3503 7.16645 10.2667 7.15491L8.71031 6.93842C6.66235 6.65248 4.70013 5.68641 2.81769 4.08004C2.22145 7.46026 3.38601 9.8019 6.19074 11.6084L7.9326 12.7297C8.01536 12.783 8.08412 12.8562 8.13286 12.943C8.18159 13.0298 8.20882 13.1275 8.21217 13.2275C8.21551 13.3276 8.19487 13.427 8.15204 13.517C8.10922 13.607 8.04551 13.6848 7.9665 13.7438L6.37918 14.9315C7.3234 14.9917 8.21975 14.9488 8.96356 14.7977C13.6677 13.8357 16.7955 10.2104 16.7955 4.23016C16.7955 3.74202 15.7864 2.04374 13.8641 2.04374ZM8.97851 4.91335C8.99592 3.92895 9.29646 2.97169 9.84252 2.16141C10.3886 1.35113 11.1559 0.723842 12.0484 0.358092C12.9409 -0.00765845 13.9188 -0.0956204 14.8599 0.105219C15.801 0.306059 16.6633 0.786775 17.3389 1.48718C18.0478 1.48207 18.651 1.66589 20 0.828497C19.666 2.50329 19.5015 3.23039 18.7896 4.23016C18.7896 12.0343 14.1064 15.8291 9.3544 16.8003C6.09602 17.4661 1.35799 16.3724 0 14.9202C0.691959 14.8651 3.50366 14.5556 5.12887 13.3373C3.75393 12.4091 -1.71893 9.11054 1.87746 0.24232C3.56548 2.26126 5.27743 3.63581 7.01231 4.36496C8.16691 4.85003 8.45007 4.83982 8.97951 4.91437L8.97851 4.91335Z" fill="#122947" />
+              </svg>
             </a>
-         </li>
-      </ul>
-      <div class="page-footer__copyright copyright">
-         <p class="copyright__text">Maroon</p>
-         <p class="copyright__text">&#169; 2020 Все права защищены</p>
-         <p class="copyright__text">Политика конфиденциальности</p>
+          </li>
+        </ul>
       </div>
-   </footer>
+    </nav>
+    <a class="page-header__logo logo" href="index.html">
+      <svg class="logo__image" width="85" height="13" viewBox="0 0 85 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0.267489H1.98644L6.83569 9.98628L11.6849 0.267489H13.6714V12.7325H11.7434V3.86968L7.32256 12.7325H6.34882L1.90854 3.86968V12.7325H0V0.267489Z" fill="#122947" />
+        <path d="M20.7532 0.267489H22.6618L28.0953 12.7325H26.0699L24.7066 9.62963H18.6889L17.3646 12.7325H15.3197L20.7532 0.267489ZM24.1613 8.11385L21.7075 2.28258L19.2537 8.11385H24.1613Z" fill="#122947" />
+        <path d="M30.2393 0.267489H35.7118C37.1659 0.267489 38.2825 0.588477 39.0615 1.23045C39.8405 1.87243 40.23 2.81161 40.23 4.04801C40.23 4.96342 39.9638 5.74211 39.4315 6.38409C38.8992 7.01417 38.1461 7.44216 37.1724 7.66804L40.1715 12.7325H38.1072L35.2054 7.8107H32.2258V12.7325H30.2393V0.267489ZM35.3807 6.27709C36.2506 6.27709 36.9387 6.09282 37.445 5.72428C37.9644 5.34385 38.224 4.78509 38.224 4.04801C38.224 3.2396 37.9709 2.66301 37.4645 2.31824C36.9712 1.97348 36.2766 1.8011 35.3807 1.8011H32.2258V6.27709H35.3807Z" fill="#122947" />
+        <path d="M48.8651 13C47.5148 13 46.2944 12.7325 45.2038 12.1975C44.1132 11.6507 43.2563 10.8839 42.6331 9.89712C42.0099 8.91038 41.6983 7.78098 41.6983 6.50892C41.6983 5.23685 42.0099 4.10745 42.6331 3.12071C43.2563 2.13397 44.1132 1.36717 45.2038 0.820302C46.2944 0.273434 47.5148 0 48.8651 0C50.2154 0 51.4358 0.273434 52.5264 0.820302C53.617 1.36717 54.4739 2.13397 55.0971 3.12071C55.7203 4.10745 56.0319 5.23685 56.0319 6.50892C56.0319 7.78098 55.7203 8.91038 55.0971 9.89712C54.4739 10.8839 53.617 11.6507 52.5264 12.1975C51.4358 12.7325 50.2154 13 48.8651 13ZM48.8651 11.3594C49.8259 11.3594 50.6957 11.1632 51.4747 10.7709C52.2667 10.3667 52.8899 9.80201 53.3443 9.07682C53.7987 8.33974 54.0259 7.48377 54.0259 6.50892C54.0259 5.54595 53.7987 4.70188 53.3443 3.97668C52.9029 3.2396 52.2927 2.6749 51.5137 2.28258C50.7347 1.87837 49.8648 1.67627 48.904 1.67627C47.9303 1.67627 47.0474 1.87243 46.2555 2.26475C45.4765 2.65706 44.8533 3.22177 44.3859 3.95885C43.9314 4.69593 43.7042 5.54595 43.7042 6.50892C43.7042 7.48377 43.9314 8.33974 44.3859 9.07682C44.8403 9.80201 45.457 10.3667 46.236 10.7709C47.028 11.1632 47.9043 11.3594 48.8651 11.3594Z" fill="#122947" />
+        <path d="M64.8596 13C63.5093 13 62.2889 12.7325 61.1983 12.1975C60.1077 11.6507 59.2508 10.8839 58.6276 9.89712C58.0044 8.91038 57.6928 7.78098 57.6928 6.50892C57.6928 5.23685 58.0044 4.10745 58.6276 3.12071C59.2508 2.13397 60.1077 1.36717 61.1983 0.820302C62.2889 0.273434 63.5093 0 64.8596 0C66.2099 0 67.4303 0.273434 68.5209 0.820302C69.6115 1.36717 70.4684 2.13397 71.0916 3.12071C71.7148 4.10745 72.0264 5.23685 72.0264 6.50892C72.0264 7.78098 71.7148 8.91038 71.0916 9.89712C70.4684 10.8839 69.6115 11.6507 68.5209 12.1975C67.4303 12.7325 66.2099 13 64.8596 13ZM64.8596 11.3594C65.8204 11.3594 66.6902 11.1632 67.4692 10.7709C68.2612 10.3667 68.8844 9.80201 69.3388 9.07682C69.7933 8.33974 70.0205 7.48377 70.0205 6.50892C70.0205 5.54595 69.7933 4.70188 69.3388 3.97668C68.8974 3.2396 68.2872 2.6749 67.5082 2.28258C66.7292 1.87837 65.8593 1.67627 64.8986 1.67627C63.9248 1.67627 63.042 1.87243 62.25 2.26475C61.471 2.65706 60.8478 3.22177 60.3804 3.95885C59.926 4.69593 59.6988 5.54595 59.6988 6.50892C59.6988 7.48377 59.926 8.33974 60.3804 9.07682C60.8348 9.80201 61.4515 10.3667 62.2305 10.7709C63.0225 11.1632 63.8988 11.3594 64.8596 11.3594Z" fill="#122947" />
+        <path d="M74.172 0.267489H76.061L82.9941 9.6653V0.267489H85V12.7325H83.0915L76.1584 3.33471V12.7325H74.172V0.267489Z" fill="#122947" />
+      </svg>
+    </a>
+    <a class="page-header__login" href="#">
+      <span class="visually-hidden">Войти в профиль</span>
+      <svg class="page-header__login-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 16C0 14.3834 0.68482 12.8331 1.90381 11.69C3.12279 10.5469 4.77609 9.90476 6.5 9.90476C8.22391 9.90476 9.87721 10.5469 11.0962 11.69C12.3152 12.8331 13 14.3834 13 16H11.375C11.375 14.7876 10.8614 13.6248 9.94715 12.7675C9.03291 11.9102 7.79293 11.4286 6.5 11.4286C5.20707 11.4286 3.96709 11.9102 3.05285 12.7675C2.13861 13.6248 1.625 14.7876 1.625 16H0ZM6.5 9.14286C3.80656 9.14286 1.625 7.09714 1.625 4.57143C1.625 2.04571 3.80656 0 6.5 0C9.19344 0 11.375 2.04571 11.375 4.57143C11.375 7.09714 9.19344 9.14286 6.5 9.14286ZM6.5 7.61905C8.29562 7.61905 9.75 6.25524 9.75 4.57143C9.75 2.88762 8.29562 1.52381 6.5 1.52381C4.70437 1.52381 3.25 2.88762 3.25 4.57143C3.25 6.25524 4.70437 7.61905 6.5 7.61905Z" fill="#122947" />
+      </svg>
+    </a>
+    <a class="page-header__basket" href="#">
+      <span class="visually-hidden">Оформить покупки</span>
+      <svg class="page-header__basket-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.11111 5.33333V3.80952C3.11111 2.79918 3.52083 1.83021 4.25014 1.11578C4.97945 0.401359 5.9686 0 7 0C8.0314 0 9.02055 0.401359 9.74986 1.11578C10.4792 1.83021 10.8889 2.79918 10.8889 3.80952V5.33333H13.2222C13.4285 5.33333 13.6263 5.41361 13.7722 5.55649C13.9181 5.69938 14 5.89317 14 6.09524V15.2381C14 15.4402 13.9181 15.634 13.7722 15.7768C13.6263 15.9197 13.4285 16 13.2222 16H0.777778C0.571498 16 0.373667 15.9197 0.227806 15.7768C0.0819442 15.634 0 15.4402 0 15.2381V6.09524C0 5.89317 0.0819442 5.69938 0.227806 5.55649C0.373667 5.41361 0.571498 5.33333 0.777778 5.33333H3.11111ZM3.11111 6.85714H1.55556V14.4762H12.4444V6.85714H10.8889V8.38095H9.33333V6.85714H4.66667V8.38095H3.11111V6.85714ZM4.66667 5.33333H9.33333V3.80952C9.33333 3.20331 9.0875 2.62193 8.64992 2.19328C8.21233 1.76463 7.61884 1.52381 7 1.52381C6.38116 1.52381 5.78767 1.76463 5.35008 2.19328C4.9125 2.62193 4.66667 3.20331 4.66667 3.80952V5.33333Z" fill="#122947" />
+      </svg>
+    </a>
+  </header>
+  <main class="page-catalog">
+    <h1 class="visually-hidden">Добро пожаловать на страницу каталога сайта Maroon</h1>
+    <section class="filter filter--closed filter--nojs">
+      <h2 class="filter__title title">Каталог</h2>
+      <button class="filter__button" type="button">Фильтр</button>
+      <form class="filter__form form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="form__container">
+          <div class="form__fieldset fieldset form__fieldset--facial-care fieldset--facial-care fieldset--closed fieldset--nojs">
+            <h3 class="fieldset__title">Уход для лица
+              <button class="fieldset__button fieldset__button--facial-care" type="button"></button>
+            </h3>
+
+            <ul class="fieldset__list fieldset-list">
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Крема" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Крема</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Сыворотки" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Сыворотки</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Маски" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Маски</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Пенки">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Пенки</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Тоники">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Тоники</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Пудры" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Пудры</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__fieldset fieldset form__fieldset--body-care fieldset--body-care fieldset--closed fieldset--nojs">
+            <h3 class="fieldset__title">Уход для тела
+              <button class="fieldset__button fieldset__button--body-care" type="button"></button>
+            </h3>
+
+            <ul class="fieldset__list fieldset-list">
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Крема">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Крема</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Масла" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Масла</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Скрабы">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Скрабы</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Мыло" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Мыло</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Бомбочки для ванны" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Бомбочки для ванны</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Соль для ванны">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Соль для ванны</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__fieldset fieldset  form__fieldset--skin-type fieldset--skin-type fieldset--closed fieldset--nojs">
+            <h3 class="fieldset__title fieldset__title--skin-type">Тип кожи
+              <button class="fieldset__button  fieldset__button--skin-type" type="button"></button>
+            </h3>
+
+
+            <ul class="fieldset__list fieldset-list">
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Нормальная">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Нормальная</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Сухая" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Сухая</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Жирная">
+                  <span class="control__mark"></span>
+                  <span class="control__label">Жирная</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="checkbox" name="Комбинированная" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label">Комбинированная</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__container-button">
+            <button class="form__button button form__button--submit" type="submit">
+              <span class="button__text">Применить</span>
+            </button>
+            <button class="form__button button form__button--reset" type="reset">
+              <span class="button__text">Сбросить</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="product container">
+      <h2 class="visually-hidden">Товары</h2>
+      <ul class="product-list product-list--catalog">
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-high-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">High</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">крем для лица</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">990 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">50ml</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-rest-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Rest</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">минеральная пудра</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">690 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">20g</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="card.html">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-rose-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Rose</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">крем для лица</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">890 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">50ml</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-milk-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Milk</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">масло для тела</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">790 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">150ml</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-paradise-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Paradise</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">минеральная пудра</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">590 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">15g</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-sun-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Sun</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">бомбочка для ванны</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">90 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">20g</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-violet-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Violet</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">крем для лица</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">890 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">50ml</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-clean-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Clean</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">маска для лица</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">490 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">100g</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-coconut-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Coconut</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">масло для тела</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">990 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">300ml</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-lavender-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Lavender</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">мыло ручной работы</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">290 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">50g</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-lotos-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Lotos</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">маска для лица</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">890 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">50ml</p>
+          </a>
+        </li>
+        <li class="product-list__item">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-earth-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Earth</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">бомбочка для ванны</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">90 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">20g</p>
+          </a>
+        </li>
+      </ul>
+      <div class="pagination pagination--catalog">
+        <div class="pagination__page">
+          <a class="pagination__page-number pagination__page-number--first" href="#">1</a>
+          <span class="pagination__page-separator"></span>
+          <a class="pagination__page-number" href="#">
+            <span class="pagination__page-number-catalog">3</span>
+            <span class="pagination__page-number-tablet">8</span></a>
+        </div>
+        <div class="pagination__controls pagination-controls pagination__controls--catalog">
+          <button class="pagination-controls__button">
+            <svg class="pagination-controls__image" width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 6.5H0.999999M0.999999 6.5L6.81818 1M0.999999 6.5L6.81818 12" stroke="#122947" />
+            </svg>
+            <span class="visually-hidden">Предыдущая страница</span>
+          </button>
+          <button class="pagination-controls__button">
+            <svg class="pagination-controls__image" width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6.5H24M24 6.5L18.1818 1M24 6.5L18.1818 12" stroke="#122947" />
+            </svg>
+            <span class="visually-hidden">Следующая страница</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="recently-viewed container">
+      <h2 class="recently-viewed__title title">Вы недавно смотрели</h2>
+      <ul class="product-list product-list--catalog">
+        <li class="product-list__item product-list__item--lotos">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-lotos-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Lotos</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">маска для лица</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">890 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">50ml</p>
+          </a>
+        </li>
+        <li class="product-list__item product-list__item--recently-viewed product-list__item--clean">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-clean-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Clean</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">маска для лица</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">490 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">100g</p>
+          </a>
+        </li>
+
+        <li class="product-list__item product-list__item--recently-viewed product-list__item--lavender">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-lavender-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Lavender</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">мыло ручной работы</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">290 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">50g</p>
+          </a>
+        </li>
+        <li class="product-list__item product-list__item--recently-viewed product-list__item--coconut">
+          <a class="product-list__item-link product-list__item-link--catalog" href="#">
+            <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-coconut-mobile.jpg" width="290" height="290" alt="">
+            <h3 class="product-list__item-title product-list__item-title--catalog">Coconut</h3>
+            <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">масло для тела</h4>
+            <p class="product-list__item-price product-list__item-price--catalog">990 &#8381;</p>
+            <p class="product-list__item-volume product-list__item-volume--catalog">300ml</p>
+          </a>
+        </li>
+      </ul>
+
+
+      <div class="pagination pagination--catalog">
+        <div class="pagination__page">
+          <a class="pagination__page-number pagination__page-number--first" href="#">1</a>
+          <span class="pagination__page-separator"></span>
+          <span class="pagination__page-number-catalog-recently-viewed">3</span>
+        </div>
+        <div class="pagination__controls pagination-controls pagination__controls--catalog">
+          <button class="pagination-controls__button">
+            <svg class="pagination-controls__image" width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 6.5H0.999999M0.999999 6.5L6.81818 1M0.999999 6.5L6.81818 12" stroke="#122947" />
+            </svg>
+            <span class="visually-hidden">Предыдущая страница</span>
+          </button>
+          <button class="pagination-controls__button">
+            <svg class="pagination-controls__image" width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6.5H24M24 6.5L18.1818 1M24 6.5L18.1818 12" stroke="#122947" />
+            </svg>
+            <span class="visually-hidden">Следующая страница</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe container">
+      <div class="subscribe__wrapper wrapper">
+        <h2 class="subscribe__title title">Присоединяйтесь к нам</h2>
+        <p class="subscribe__description description">Подпишитесь на наш аккаунт @marooncare <span class="br br--desktop"></span> и узнавайте <span class="br br--mobile"></span><span class="br br--tablet"></span> о новиках и акциях первыми</p>
+        <a class="subscribe__link button" href="#">Подписаться</a>
+      </div>
+    </section>
+    <section class="contacts container">
+      <div class="contacts__wrapper wrapper">
+        <h2 class="contacts__title title">Контакты</h2>
+
+        <address class="contacts__box">
+          <p class="contacts__subtitle">Адрес</p>
+          <p class="contacts__text">Санкт-Петербург, <span class="br br--mobile"></span><span class="br br--tablet"></span><span class="br br--desktop"></span> ул. Большая Конюшенная, 19</p>
+        </address>
+        <address class="contacts__box">
+          <p class="contacts__subtitle">Телефон</p>
+          <a class="contacts__text contacts__text--link" href="tel:89238889060">+7 (923) 888-90-60</a>
+        </address>
+        <address class="contacts__box contacts__box--email">
+          <p class="contacts__subtitle">E-mail</p>
+          <a class="contacts__text contacts__text--link" href="mailto:info@maroon.ru">info@maroon.ru</a>
+        </address>
+        <ul class="contacts__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="http://facebook.com">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="social-list__link-icon" width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.28571 7H11L10.4762 9H6.28571V18H4.19048V9H0V7H4.19048V5.128C4.19048 3.345 4.38533 2.698 4.74991 2.046C5.10715 1.40181 5.65904 0.875009 6.3339 0.534C7.01695 0.186 7.69476 0 9.56267 0C10.1095 0 10.5893 0.0500001 11 0.15V2H9.56267C8.17562 2 7.75343 2.078 7.32286 2.298C7.00438 2.46 6.76762 2.686 6.59791 2.99C6.36743 3.401 6.28571 3.804 6.28571 5.128V7Z" fill="#122947" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="http://instagram.com">
+              <span class="visually-hidden">Мы в Инстаграмме</span>
+              <svg class="social-list__link-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75ZM10 2C7.526 2 7.122 2.007 5.971 2.058C5.187 2.095 4.661 2.2 4.173 2.39C3.739 2.558 3.426 2.759 3.093 3.093C2.78001 3.3954 2.53935 3.76458 2.389 4.173C2.199 4.663 2.094 5.188 2.058 5.971C2.006 7.075 2 7.461 2 10C2 12.474 2.007 12.878 2.058 14.029C2.095 14.812 2.2 15.339 2.389 15.826C2.559 16.261 2.759 16.574 3.091 16.906C3.428 17.242 3.741 17.443 4.171 17.609C4.665 17.8 5.191 17.906 5.971 17.942C7.075 17.994 7.461 18 10 18C12.474 18 12.878 17.993 14.029 17.942C14.811 17.905 15.338 17.8 15.826 17.611C16.259 17.442 16.574 17.241 16.906 16.909C17.243 16.572 17.444 16.259 17.61 15.829C17.8 15.336 17.906 14.809 17.942 14.029C17.994 12.925 18 12.539 18 10C18 7.526 17.993 7.122 17.942 5.971C17.905 5.189 17.8 4.661 17.61 4.173C17.4593 3.765 17.2191 3.39596 16.907 3.093C16.6047 2.77985 16.2355 2.53917 15.827 2.389C15.337 2.199 14.811 2.094 14.029 2.058C12.925 2.006 12.539 2 10 2ZM10 0C12.717 0 13.056 0.00999994 14.122 0.0599999C15.187 0.11 15.912 0.277 16.55 0.525C17.21 0.779 17.766 1.123 18.322 1.678C18.8305 2.1779 19.224 2.78259 19.475 3.45C19.722 4.087 19.89 4.813 19.94 5.878C19.987 6.944 20 7.283 20 10C20 12.717 19.99 13.056 19.94 14.122C19.89 15.187 19.722 15.912 19.475 16.55C19.2247 17.2178 18.8311 17.8226 18.322 18.322C17.822 18.8303 17.2173 19.2238 16.55 19.475C15.913 19.722 15.187 19.89 14.122 19.94C13.056 19.987 12.717 20 10 20C7.283 20 6.944 19.99 5.878 19.94C4.813 19.89 4.088 19.722 3.45 19.475C2.78233 19.2245 2.17753 18.8309 1.678 18.322C1.16941 17.8222 0.775931 17.2175 0.525 16.55C0.277 15.913 0.11 15.187 0.0599999 14.122C0.0129999 13.056 0 12.717 0 10C0 7.283 0.00999994 6.944 0.0599999 5.878C0.11 4.812 0.277 4.088 0.525 3.45C0.775236 2.78218 1.1688 2.17732 1.678 1.678C2.17767 1.16923 2.78243 0.775729 3.45 0.525C4.088 0.277 4.812 0.11 5.878 0.0599999C6.944 0.0129999 7.283 0 10 0Z" fill="#122947" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="http://twitter.com">
+              <span class="visually-hidden">Мы в Твиттере</span>
+              <svg class="social-list__link-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.8641 2.04374C13.1063 2.04361 12.3787 2.34819 11.838 2.89193C11.2972 3.43567 10.9865 4.17511 10.9726 4.95114L10.9447 6.55955C10.9431 6.6459 10.9236 6.73093 10.8877 6.80905C10.8517 6.88717 10.8 6.95662 10.736 7.01284C10.6719 7.06906 10.597 7.11078 10.5162 7.13527C10.4353 7.15975 10.3503 7.16645 10.2667 7.15491L8.71031 6.93842C6.66235 6.65248 4.70013 5.68641 2.81769 4.08004C2.22145 7.46026 3.38601 9.8019 6.19074 11.6084L7.9326 12.7297C8.01536 12.783 8.08412 12.8562 8.13286 12.943C8.18159 13.0298 8.20882 13.1275 8.21217 13.2275C8.21551 13.3276 8.19487 13.427 8.15204 13.517C8.10922 13.607 8.04551 13.6848 7.9665 13.7438L6.37918 14.9315C7.3234 14.9917 8.21975 14.9488 8.96356 14.7977C13.6677 13.8357 16.7955 10.2104 16.7955 4.23016C16.7955 3.74202 15.7864 2.04374 13.8641 2.04374ZM8.97851 4.91335C8.99592 3.92895 9.29646 2.97169 9.84252 2.16141C10.3886 1.35113 11.1559 0.723842 12.0484 0.358092C12.9409 -0.00765845 13.9188 -0.0956204 14.8599 0.105219C15.801 0.306059 16.6633 0.786775 17.3389 1.48718C18.0478 1.48207 18.651 1.66589 20 0.828497C19.666 2.50329 19.5015 3.23039 18.7896 4.23016C18.7896 12.0343 14.1064 15.8291 9.3544 16.8003C6.09602 17.4661 1.35799 16.3724 0 14.9202C0.691959 14.8651 3.50366 14.5556 5.12887 13.3373C3.75393 12.4091 -1.71893 9.11054 1.87746 0.24232C3.56548 2.26126 5.27743 3.63581 7.01231 4.36496C8.16691 4.85003 8.45007 4.83982 8.97951 4.91437L8.97851 4.91335Z" fill="#122947" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__wrapper-map">
+        <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991032728616!2d30.3230833!3d59.9387942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1656349316066!5m2!1sen!2sru" width="290" height="281" style="border:0;" loading="lazy" title="Офис в Санкт-Петербурге" allowfullscreen=""></iframe>
+        <img class="contacts__image-map" src="img/contacts-map-mobile.jpg" width="290" height="281" alt="Россия, Санкт-Петербург, ул. Большая Конюшенная, 19">
+      </div>
+
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper container">
+      <div class="page-footer__wrapper-nav page-footer-nav">
+        <a class="page-footer-nav__logo logo logo--footer" href="index.html">
+          <svg class="logo__image logo__image--footer" width="85" height="13" viewBox="0 0 85 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0.267489H1.98644L6.83569 9.98628L11.6849 0.267489H13.6714V12.7325H11.7434V3.86968L7.32256 12.7325H6.34882L1.90854 3.86968V12.7325H0V0.267489Z" fill="#122947" />
+            <path d="M20.7532 0.267489H22.6618L28.0953 12.7325H26.0699L24.7066 9.62963H18.6889L17.3646 12.7325H15.3197L20.7532 0.267489ZM24.1613 8.11385L21.7075 2.28258L19.2537 8.11385H24.1613Z" fill="#122947" />
+            <path d="M30.2393 0.267489H35.7118C37.1659 0.267489 38.2825 0.588477 39.0615 1.23045C39.8405 1.87243 40.23 2.81161 40.23 4.04801C40.23 4.96342 39.9638 5.74211 39.4315 6.38409C38.8992 7.01417 38.1461 7.44216 37.1724 7.66804L40.1715 12.7325H38.1072L35.2054 7.8107H32.2258V12.7325H30.2393V0.267489ZM35.3807 6.27709C36.2506 6.27709 36.9387 6.09282 37.445 5.72428C37.9644 5.34385 38.224 4.78509 38.224 4.04801C38.224 3.2396 37.9709 2.66301 37.4645 2.31824C36.9712 1.97348 36.2766 1.8011 35.3807 1.8011H32.2258V6.27709H35.3807Z" fill="#122947" />
+            <path d="M48.8651 13C47.5148 13 46.2944 12.7325 45.2038 12.1975C44.1132 11.6507 43.2563 10.8839 42.6331 9.89712C42.0099 8.91038 41.6983 7.78098 41.6983 6.50892C41.6983 5.23685 42.0099 4.10745 42.6331 3.12071C43.2563 2.13397 44.1132 1.36717 45.2038 0.820302C46.2944 0.273434 47.5148 0 48.8651 0C50.2154 0 51.4358 0.273434 52.5264 0.820302C53.617 1.36717 54.4739 2.13397 55.0971 3.12071C55.7203 4.10745 56.0319 5.23685 56.0319 6.50892C56.0319 7.78098 55.7203 8.91038 55.0971 9.89712C54.4739 10.8839 53.617 11.6507 52.5264 12.1975C51.4358 12.7325 50.2154 13 48.8651 13ZM48.8651 11.3594C49.8259 11.3594 50.6957 11.1632 51.4747 10.7709C52.2667 10.3667 52.8899 9.80201 53.3443 9.07682C53.7987 8.33974 54.0259 7.48377 54.0259 6.50892C54.0259 5.54595 53.7987 4.70188 53.3443 3.97668C52.9029 3.2396 52.2927 2.6749 51.5137 2.28258C50.7347 1.87837 49.8648 1.67627 48.904 1.67627C47.9303 1.67627 47.0474 1.87243 46.2555 2.26475C45.4765 2.65706 44.8533 3.22177 44.3859 3.95885C43.9314 4.69593 43.7042 5.54595 43.7042 6.50892C43.7042 7.48377 43.9314 8.33974 44.3859 9.07682C44.8403 9.80201 45.457 10.3667 46.236 10.7709C47.028 11.1632 47.9043 11.3594 48.8651 11.3594Z" fill="#122947" />
+            <path d="M64.8596 13C63.5093 13 62.2889 12.7325 61.1983 12.1975C60.1077 11.6507 59.2508 10.8839 58.6276 9.89712C58.0044 8.91038 57.6928 7.78098 57.6928 6.50892C57.6928 5.23685 58.0044 4.10745 58.6276 3.12071C59.2508 2.13397 60.1077 1.36717 61.1983 0.820302C62.2889 0.273434 63.5093 0 64.8596 0C66.2099 0 67.4303 0.273434 68.5209 0.820302C69.6115 1.36717 70.4684 2.13397 71.0916 3.12071C71.7148 4.10745 72.0264 5.23685 72.0264 6.50892C72.0264 7.78098 71.7148 8.91038 71.0916 9.89712C70.4684 10.8839 69.6115 11.6507 68.5209 12.1975C67.4303 12.7325 66.2099 13 64.8596 13ZM64.8596 11.3594C65.8204 11.3594 66.6902 11.1632 67.4692 10.7709C68.2612 10.3667 68.8844 9.80201 69.3388 9.07682C69.7933 8.33974 70.0205 7.48377 70.0205 6.50892C70.0205 5.54595 69.7933 4.70188 69.3388 3.97668C68.8974 3.2396 68.2872 2.6749 67.5082 2.28258C66.7292 1.87837 65.8593 1.67627 64.8986 1.67627C63.9248 1.67627 63.042 1.87243 62.25 2.26475C61.471 2.65706 60.8478 3.22177 60.3804 3.95885C59.926 4.69593 59.6988 5.54595 59.6988 6.50892C59.6988 7.48377 59.926 8.33974 60.3804 9.07682C60.8348 9.80201 61.4515 10.3667 62.2305 10.7709C63.0225 11.1632 63.8988 11.3594 64.8596 11.3594Z" fill="#122947" />
+            <path d="M74.172 0.267489H76.061L82.9941 9.6653V0.267489H85V12.7325H83.0915L76.1584 3.33471V12.7325H74.172V0.267489Z" fill="#122947" />
+          </svg>
+        </a>
+        <ul class="page-footer-nav__list footer-list">
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="#">О нас</a>
+          </li>
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="#">Магазины</a>
+          </li>
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="page-footer-nav__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="http://facebook.com">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="social-list__link-icon" width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.28571 7H11L10.4762 9H6.28571V18H4.19048V9H0V7H4.19048V5.128C4.19048 3.345 4.38533 2.698 4.74991 2.046C5.10715 1.40181 5.65904 0.875009 6.3339 0.534C7.01695 0.186 7.69476 0 9.56267 0C10.1095 0 10.5893 0.0500001 11 0.15V2H9.56267C8.17562 2 7.75343 2.078 7.32286 2.298C7.00438 2.46 6.76762 2.686 6.59791 2.99C6.36743 3.401 6.28571 3.804 6.28571 5.128V7Z" fill="#122947" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="http://instagram.com">
+              <span class="visually-hidden">Мы в Инстаграмме</span>
+              <svg class="social-list__link-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75ZM10 2C7.526 2 7.122 2.007 5.971 2.058C5.187 2.095 4.661 2.2 4.173 2.39C3.739 2.558 3.426 2.759 3.093 3.093C2.78001 3.3954 2.53935 3.76458 2.389 4.173C2.199 4.663 2.094 5.188 2.058 5.971C2.006 7.075 2 7.461 2 10C2 12.474 2.007 12.878 2.058 14.029C2.095 14.812 2.2 15.339 2.389 15.826C2.559 16.261 2.759 16.574 3.091 16.906C3.428 17.242 3.741 17.443 4.171 17.609C4.665 17.8 5.191 17.906 5.971 17.942C7.075 17.994 7.461 18 10 18C12.474 18 12.878 17.993 14.029 17.942C14.811 17.905 15.338 17.8 15.826 17.611C16.259 17.442 16.574 17.241 16.906 16.909C17.243 16.572 17.444 16.259 17.61 15.829C17.8 15.336 17.906 14.809 17.942 14.029C17.994 12.925 18 12.539 18 10C18 7.526 17.993 7.122 17.942 5.971C17.905 5.189 17.8 4.661 17.61 4.173C17.4593 3.765 17.2191 3.39596 16.907 3.093C16.6047 2.77985 16.2355 2.53917 15.827 2.389C15.337 2.199 14.811 2.094 14.029 2.058C12.925 2.006 12.539 2 10 2ZM10 0C12.717 0 13.056 0.00999994 14.122 0.0599999C15.187 0.11 15.912 0.277 16.55 0.525C17.21 0.779 17.766 1.123 18.322 1.678C18.8305 2.1779 19.224 2.78259 19.475 3.45C19.722 4.087 19.89 4.813 19.94 5.878C19.987 6.944 20 7.283 20 10C20 12.717 19.99 13.056 19.94 14.122C19.89 15.187 19.722 15.912 19.475 16.55C19.2247 17.2178 18.8311 17.8226 18.322 18.322C17.822 18.8303 17.2173 19.2238 16.55 19.475C15.913 19.722 15.187 19.89 14.122 19.94C13.056 19.987 12.717 20 10 20C7.283 20 6.944 19.99 5.878 19.94C4.813 19.89 4.088 19.722 3.45 19.475C2.78233 19.2245 2.17753 18.8309 1.678 18.322C1.16941 17.8222 0.775931 17.2175 0.525 16.55C0.277 15.913 0.11 15.187 0.0599999 14.122C0.0129999 13.056 0 12.717 0 10C0 7.283 0.00999994 6.944 0.0599999 5.878C0.11 4.812 0.277 4.088 0.525 3.45C0.775236 2.78218 1.1688 2.17732 1.678 1.678C2.17767 1.16923 2.78243 0.775729 3.45 0.525C4.088 0.277 4.812 0.11 5.878 0.0599999C6.944 0.0129999 7.283 0 10 0Z" fill="#122947" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="http://twitter.com">
+              <span class="visually-hidden">Мы в Твиттере</span>
+              <svg class="social-list__link-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.8641 2.04374C13.1063 2.04361 12.3787 2.34819 11.838 2.89193C11.2972 3.43567 10.9865 4.17511 10.9726 4.95114L10.9447 6.55955C10.9431 6.6459 10.9236 6.73093 10.8877 6.80905C10.8517 6.88717 10.8 6.95662 10.736 7.01284C10.6719 7.06906 10.597 7.11078 10.5162 7.13527C10.4353 7.15975 10.3503 7.16645 10.2667 7.15491L8.71031 6.93842C6.66235 6.65248 4.70013 5.68641 2.81769 4.08004C2.22145 7.46026 3.38601 9.8019 6.19074 11.6084L7.9326 12.7297C8.01536 12.783 8.08412 12.8562 8.13286 12.943C8.18159 13.0298 8.20882 13.1275 8.21217 13.2275C8.21551 13.3276 8.19487 13.427 8.15204 13.517C8.10922 13.607 8.04551 13.6848 7.9665 13.7438L6.37918 14.9315C7.3234 14.9917 8.21975 14.9488 8.96356 14.7977C13.6677 13.8357 16.7955 10.2104 16.7955 4.23016C16.7955 3.74202 15.7864 2.04374 13.8641 2.04374ZM8.97851 4.91335C8.99592 3.92895 9.29646 2.97169 9.84252 2.16141C10.3886 1.35113 11.1559 0.723842 12.0484 0.358092C12.9409 -0.00765845 13.9188 -0.0956204 14.8599 0.105219C15.801 0.306059 16.6633 0.786775 17.3389 1.48718C18.0478 1.48207 18.651 1.66589 20 0.828497C19.666 2.50329 19.5015 3.23039 18.7896 4.23016C18.7896 12.0343 14.1064 15.8291 9.3544 16.8003C6.09602 17.4661 1.35799 16.3724 0 14.9202C0.691959 14.8651 3.50366 14.5556 5.12887 13.3373C3.75393 12.4091 -1.71893 9.11054 1.87746 0.24232C3.56548 2.26126 5.27743 3.63581 7.01231 4.36496C8.16691 4.85003 8.45007 4.83982 8.97951 4.91437L8.97851 4.91335Z" fill="#122947" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="page-footer__wrapper-copyright copyright">
+        <div class="copyright__box">
+          <p class="copyright__box-text">Maroon</p>
+          <p class="copyright__box-text copyright__box-text--law"><span class="copyright__box-letter">&#169;</span> 2020 Все права защищены</p>
+        </div>
+        <p class="copyright__box-text">Политика конфиденциальности</p>
+      </div>
+    </div>
+
+  </footer>
+  <script>
+
+    var navMain = document.querySelector('.nav');
+    var navToggle = document.querySelector('.nav__button');
+
+    navMain.classList.remove('nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('nav--closed')) {
+        navMain.classList.remove('nav--closed');
+        navMain.classList.add('nav--opened');
+      } else {
+        navMain.classList.add('nav--closed');
+        navMain.classList.remove('nav--opened');
+      }
+    });
+
+
+    var navFilter = document.querySelector('.filter');
+    var navButton = document.querySelector('.filter__button');
+
+    navFilter.classList.remove('filter--nojs');
+
+    navButton.addEventListener('click', function () {
+      if (navFilter.classList.contains('filter--closed')) {
+        navFilter.classList.remove('filter--closed');
+        navFilter.classList.add('filter--opened');
+      } else {
+        navFilter.classList.add('filter--closed');
+        navFilter.classList.remove('filter--opened');
+      }
+    });
+
+    var navFieldsetFacial = document.querySelector('.fieldset--facial-care');
+    var navButtonFieldsetFacial = document.querySelector('.fieldset__button--facial-care');
+
+    navFieldsetFacial.classList.remove('fieldset--nojs');
+
+    navButtonFieldsetFacial.addEventListener('click', function () {
+      if (navFieldsetFacial.classList.contains('fieldset--closed')) {
+        navFieldsetFacial.classList.remove('fieldset--closed');
+        navFieldsetFacial.classList.add('fieldset--opened');
+      } else {
+        navFieldsetFacial.classList.add('fieldset--closed');
+        navFieldsetFacial.classList.remove('fieldset--opened');
+      }
+    });
+
+    var navFieldsetBody = document.querySelector('.fieldset--body-care');
+    var navButtonFieldsetBody = document.querySelector('.fieldset__button--body-care');
+
+    navFieldsetBody.classList.remove('fieldset--nojs');
+
+    navButtonFieldsetBody.addEventListener('click', function () {
+      if (navFieldsetBody.classList.contains('fieldset--closed')) {
+        navFieldsetBody.classList.remove('fieldset--closed');
+        navFieldsetBody.classList.add('fieldset--opened');
+      } else {
+        navFieldsetBody.classList.add('fieldset--closed');
+        navFieldsetBody.classList.remove('fieldset--opened');
+      }
+    });
+
+    var navFieldsetSkin = document.querySelector('.fieldset--skin-type');
+    var navButtonFieldsetSkin = document.querySelector('.fieldset__button--skin-type');
+
+    navFieldsetSkin.classList.remove('fieldset--nojs');
+
+    navButtonFieldsetSkin.addEventListener('click', function () {
+      if (navFieldsetSkin.classList.contains('fieldset--closed')) {
+        navFieldsetSkin.classList.remove('fieldset--closed');
+        navFieldsetSkin.classList.add('fieldset--opened');
+      } else {
+        navFieldsetSkin.classList.add('fieldset--closed');
+        navFieldsetSkin.classList.remove('fieldset--opened');
+      }
+    });
+  </script>
 </body>
+
 
 </html>

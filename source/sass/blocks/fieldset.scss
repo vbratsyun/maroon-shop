@@ -1,0 +1,249 @@
+.fieldset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+  border: none;
+
+  &--volume {
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 39px;
+  }
+
+  &--compound,
+  &--application {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -13px;
+      width: 100%;
+      height: 1px;
+      background-color: $button-border;
+
+      @media (min-width: $tablet-width) {
+        bottom: -14px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 80%;
+    }
+  }
+
+  &--compound {
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -12px;
+      width: 100%;
+      height: 1px;
+      background-color: $button-border;
+
+      @media (min-width: $tablet-width) {
+        top: -14px;
+      }
+    }
+  }
+
+  &--application {
+    margin-bottom: 48px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 56px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 53px;
+    }
+  }
+}
+
+.fieldset__title {
+  @include link;
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-bottom: 27px;
+  font-size: 18px;
+  font-weight: 500;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #dbdce0;
+  }
+
+  &--skin-type {
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 17px;
+    font-size: 18px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  &--card {
+    font-size: 16px;
+    padding-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.fieldset__button {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 12px;
+  margin: 0;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &--compound,
+  &--application {
+    display: block;
+  }
+}
+
+.fieldset__list {
+  margin-bottom: 17px;
+}
+
+.fieldset__text {
+  @include text;
+
+  display: none;
+  width: 97%;
+  margin-top: 9px;
+  font-size: 14px;
+  line-height: 145%;
+}
+
+.fieldset--closed .fieldset__button--facial-care,
+.fieldset--closed .fieldset__button--body-care,
+.fieldset--closed .fieldset__button--skin-type,
+.fieldset--closed .fieldset__button--compound,
+.fieldset--closed .fieldset__button--application {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 12px;
+    height: 1px;
+    margin: auto;
+    background-color: $text-color;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.fieldset--closed .fieldset__button--compound,
+.fieldset--closed .fieldset__button--application {
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      content: "";
+      right: 20px;
+    }
+  }
+}
+
+.fieldset--opened .fieldset__button--facial-care,
+.fieldset--opened .fieldset__button--body-care,
+.fieldset--opened .fieldset__button--skin-type,
+.fieldset--opened .fieldset__button--compound,
+.fieldset--opened .fieldset__button--application {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 12px;
+    height: 1px;
+    margin: auto;
+    background-color: $text-color;
+  }
+}
+
+.fieldset--opened .fieldset__button--compound,
+.fieldset--opened .fieldset__button--application {
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      right: 20px;
+    }
+  }
+}
+
+.fieldset--opened .fieldset__title--skin-type {
+  &::before {
+    content: "";
+  }
+}
+
+.fieldset--opened .fieldset-list {
+  display: block;
+}
+
+.fieldset--opened .fieldset__text {
+  display: block;
+}
+
+.fieldset--opened .fieldset__title {
+  &--card::before {
+    content: none;
+  }
+}
+
+.fieldset--nojs .fieldset__button--compound,
+.fieldset--nojs .fieldset__button--application {
+  display: none;
+}
+
+.fieldset--nojs .fieldset__text {
+  display: block;
+}

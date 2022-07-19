@@ -1,0 +1,59 @@
+.about-us {
+  margin-bottom: 71px;
+  padding: 55px 0 60px;
+  background: url("../../img/about-us-image-mobile.jpg") no-repeat
+    $background-color;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 169px;
+    padding: 91px 0 100px;
+    background: url("../../img/about-us-image-tablet.jpg") no-repeat
+      $background-color;
+    background-size: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 281px;
+    padding: 113px 0 118px;
+    background: url("../../img/about-us-image-desktop.jpg") no-repeat
+      $background-color;
+    background-size: cover;
+  }
+}
+
+.about-us__wrapper {
+  width: 80%;
+
+  @media (min-width: $tablet-width) {
+    width: 94%;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 57%;
+  }
+}
+
+.about-us__quote {
+  width: 97%;
+  font-family: "Relaway", "Arial", "Helvetica", sans-serif;
+  font-size: 22px;
+  line-height: 126%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+}
+
+.about-us__link {
+  @include link;
+
+  width: 156px;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+  }
+}

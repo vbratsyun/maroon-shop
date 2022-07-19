@@ -1,0 +1,26 @@
+$white: #ffffff;
+$text-color: #122947;
+$button-border: #b3bac1;
+$subtitle: #9a9da0;
+$background-color: #f4f1ed;
+$copyright-text: #959595;
+$line: #d1d1d1;
+
+$desktop-width: 1366px;
+$tablet-width: 768px;
+$mobile-width-only: 320px;
+
+@mixin text {
+  margin: 0;
+}
+
+@mixin link {
+  color: $text-color;
+  text-decoration: none;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

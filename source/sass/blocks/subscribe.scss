@@ -22,7 +22,13 @@
     width: 290px;
     height: 290px;
     background: url("../../img/subscribe-image-mobile.jpg") no-repeat;
+    background-size: contain;
     transform: translateX(-50%);
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../../img/subscribe-image-mobile@2x.jpg") no-repeat;
+      background-size: contain;
+    }
 
     @media (min-width: $tablet-width) {
       top: -49px;
@@ -31,6 +37,11 @@
       height: 354px;
       background: url("../../img/subscribe-image-tablet.jpg") no-repeat;
       transform: none;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: url("../../img/subscribe-image-tablet@2x.jpg") no-repeat;
+        background-size: contain;
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -40,6 +51,11 @@
       height: 466px;
       background: url("../../img/subscribe-image-desktop.jpg") no-repeat;
       transform: none;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: url("../../img/subscribe-image-desktop@2x.jpg") no-repeat;
+        background-size: contain;
+      }
     }
   }
 

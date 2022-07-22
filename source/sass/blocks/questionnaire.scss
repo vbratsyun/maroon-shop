@@ -21,6 +21,11 @@
     background-size: contain;
     transform: translateX(-50%);
 
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../../img/questionnaire-image-mobile@2x.jpg") no-repeat;
+      background-size: contain;
+    }
+
     @media (min-width: $tablet-width) {
       top: 36px;
       left: 100%;
@@ -29,6 +34,11 @@
       background: url("../../img/questionnaire-image-tablet.jpg") no-repeat;
       background-size: contain;
       transform: translateX(-70.5%);
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: url("../../img/questionnaire-image-tablet@2x.jpg") no-repeat;
+        background-size: contain;
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -40,6 +50,12 @@
       background: url("../../img/questionnaire-image-desktop.jpg") no-repeat;
       background-size: contain;
       transform: none;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: url("../../img/questionnaire-image-desktop@2x.jpg")
+          no-repeat;
+        background-size: contain;
+      }
     }
   }
 }

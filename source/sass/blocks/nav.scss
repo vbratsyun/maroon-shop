@@ -149,9 +149,9 @@
 .nav--nojs .nav__button {
   display: none;
 
-  &--catalog {
-    display: block;
-  }
+  // &--catalog {
+  //   display: block;
+  // }
 }
 
 .nav--closed .nav__dropdown {
@@ -175,7 +175,7 @@
 
 .nav--nojs .nav__dropdown {
   position: absolute;
-  display: block;
+  // display: block;
 
   @media (min-width: $desktop-width) {
     position: static;
@@ -192,10 +192,12 @@
     background-color: #dbdce0;
   }
 
-  &--catalog,
   &--card {
     display: none;
+  }
 
+  &--catalog,
+  &--card {
     &::before {
       content: none;
     }

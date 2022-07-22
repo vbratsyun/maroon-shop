@@ -70,8 +70,6 @@
   }
 
   &--catalog {
-    grid-column: 1/-1;
-    grid-row: 1/4;
     width: 290px;
     height: 290px;
 
@@ -93,6 +91,17 @@
   left: 50%;
   width: max-content;
   transform: translateX(-50%);
+
+  &--catalog {
+    bottom: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+.product-list__item-picture {
+  grid-column: 1/-1;
+  grid-row: 1/4;
 }
 
 .product-list__item-title {
@@ -169,9 +178,9 @@
   }
 
   &--catalog {
-    grid-template-columns: repeat(2, max-content);
     align-items: center;
     display: grid;
+    grid-template-columns: repeat(2, auto);
 
     &::after {
       content: none;

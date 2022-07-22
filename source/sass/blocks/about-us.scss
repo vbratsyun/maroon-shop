@@ -5,12 +5,24 @@
     $background-color;
   background-size: cover;
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background: url("../../img/about-us-image-mobile@2x.jpg") no-repeat
+      $background-color;
+    background-size: cover;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 169px;
     padding: 91px 0 100px;
     background: url("../../img/about-us-image-tablet.jpg") no-repeat
       $background-color;
     background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../../img/about-us-image-tablet@2x.jpg") no-repeat
+        $background-color;
+      background-size: cover;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -19,6 +31,12 @@
     background: url("../../img/about-us-image-desktop.jpg") no-repeat
       $background-color;
     background-size: cover;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../../img/about-us-image-desktop@2x.jpg") no-repeat
+        $background-color;
+      background-size: cover;
+    }
   }
 }
 

@@ -28,8 +28,10 @@
   display: block;
 
   @media (min-width: $tablet-width) {
-    width: 131px;
-    height: 21px;
+    // position: relative;
+    // top: 4px;
+    // left: 24px;
+    // transform: scale(1.55);
   }
 
   &--footer {

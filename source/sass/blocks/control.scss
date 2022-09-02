@@ -1,6 +1,8 @@
 .control {
   position: relative;
-  display: flex;
+  // display: flex;
+  display: grid;
+  grid-template-columns: 16px 1fr;
   align-items: center;
   column-gap: 9px;
 }
@@ -44,4 +46,34 @@
 
 .control__input:checked ~ .control__label {
   color: inherit;
+}
+
+.control__input:hover + .control__mark {
+  opacity: 0.6;
+}
+
+.control__input:hover ~ .control__label {
+  opacity: 0.6;
+}
+
+.control__input:focus + .control__mark {
+  border-color: #dc0404;
+  opacity: 0.4;
+
+  &::before {
+    background-color: #dc0404;
+  }
+}
+
+.control__input:focus ~ .control__label {
+  color: #dc0404;
+  opacity: 0.4;
+}
+
+.control__input:active + .control__mark {
+  opacity: 1;
+}
+
+.control__input:active ~ .control__label {
+  opacity: 1;
 }

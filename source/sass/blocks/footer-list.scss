@@ -1,26 +1,48 @@
 .footer-list {
-  display: grid;
-  grid-template-columns: repeat(2, min-content);
+  display: flex;
+  flex-wrap: wrap;
+  // display: grid;
+  // grid-template-columns: repeat(2, min-content);
   gap: 15px 30px;
+  max-width: 222px;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    width: 339px;
+    width: 346px;
+    max-width: 100%;
     margin: 0 auto;
+    column-gap: 26px;
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 51px;
-    width: auto;
-    margin-left: 69px;
+    column-gap: 41px;
+    width: 67.6%;
+    margin: 0;
     margin-right: auto;
   }
 }
 
 .footer-list__link {
   @include link;
+  @include focus-border;
 
   display: block;
   font-size: 14px;
   line-height: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    @include hover;
+  }
+
+  &:focus {
+    @include focus;
+  }
+
+  &:active {
+    @include active;
+  }
 }

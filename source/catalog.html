@@ -34,7 +34,7 @@
             <a class="social-list__link" href="http://facebook.com">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social-list__link-icon" width="11" height="18" focusable="false">
-                <use xlink: href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -42,7 +42,7 @@
             <a class="social-list__link" href="http://instagram.com">
               <span class="visually-hidden">Мы в Инстаграмме</span>
               <svg class="social-list__link-icon" width="20" height="20" focusable="false">
-                <use xlink: href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -50,7 +50,7 @@
             <a class="social-list__link" href="http://twitter.com">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social-list__link-icon" width="20" height="17" focusable="false">
-                <use xlink: href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
@@ -58,20 +58,22 @@
       </div>
     </nav>
     <a class="page-header__logo logo" href="index.html">
-      <svg class="logo__image" width="85" height="13" focusable="false">
-        <use xlink: href="img/sprite.svg#logo-icon"></use>
-      </svg>
+      <picture>
+        <source media="(min-width: 1366px)" srcset="img/logo-icon.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-icon.svg">
+        <img class="logo__image" src="img/logo-icon.svg" width="85" height="13" alt="Логотип сайта.">
+      </picture>
     </a>
     <a class="page-header__login" href="#">
       <span class="visually-hidden">Войти в профиль</span>
-      <svg class="page-header__login-icon" width="13" height="16" focusable="false">
-        <use xlink: href="img/sprite.svg#login-icon"></use>
+      <svg class="page-header__login-icon page-header__login-icon--catalog" width="13" height="16" focusable="false">
+        <use xlink:href="img/sprite.svg#login-icon"></use>
       </svg>
     </a>
     <a class="page-header__basket" href="#">
       <span class="visually-hidden">Оформить покупки</span>
-      <svg class="page-header__basket-icon" width="14" height="16" focusable="false">
-        <use xlink: href="img/sprite.svg#basket-icon"></use>
+      <svg class="page-header__basket-icon page-header__basket-icon--catalog" width="14" height="16" focusable="false">
+        <use xlink:href="img/sprite.svg#basket-icon"></use>
       </svg>
     </a>
   </header>
@@ -79,13 +81,15 @@
     <h1 class="visually-hidden">Добро пожаловать на страницу каталога сайта Maroon</h1>
     <section class="filter filter--closed filter--nojs">
       <h2 class="filter__title title">Каталог</h2>
-      <button class="filter__button" type="button">Фильтр</button>
+      <button class="filter__button" type="button">
+        Фильтр
+      </button>
       <form class="filter__form form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form__container">
           <div class="form__fieldset fieldset form__fieldset--facial-care fieldset--facial-care fieldset--closed fieldset--nojs">
-            <h3 class="fieldset__title">Уход для лица
-              <button class="fieldset__button fieldset__button--facial-care" type="button"></button>
-            </h3>
+            <button class="fieldset__button fieldset__button--facial-care" type="button">
+              <span class="fieldset__title">Уход для лица</span>
+            </button>
 
             <ul class="fieldset__list fieldset-list">
               <li class="fieldset-list__item">
@@ -133,10 +137,9 @@
             </ul>
           </div>
           <div class="form__fieldset fieldset form__fieldset--body-care fieldset--body-care fieldset--closed fieldset--nojs">
-            <h3 class="fieldset__title">Уход для тела
-              <button class="fieldset__button fieldset__button--body-care" type="button"></button>
-            </h3>
-
+            <button class="fieldset__button fieldset__button--body-care" type="button">
+              <span class="fieldset__title">Уход для тела</span>
+            </button>
             <ul class="fieldset__list fieldset-list">
               <li class="fieldset-list__item">
                 <label class="fieldset-list__item-control control">
@@ -183,11 +186,9 @@
             </ul>
           </div>
           <div class="form__fieldset fieldset  form__fieldset--skin-type fieldset--skin-type fieldset--closed fieldset--nojs">
-            <h3 class="fieldset__title fieldset__title--skin-type">Тип кожи
-              <button class="fieldset__button  fieldset__button--skin-type" type="button"></button>
-            </h3>
-
-
+            <button class="fieldset__button  fieldset__button--skin-type" type="button">
+              <span class="fieldset__title  fieldset__title--skin-type">Тип кожи</span>
+            </button>
             <ul class="fieldset__list fieldset-list">
               <li class="fieldset-list__item">
                 <label class="fieldset-list__item-control control">
@@ -248,6 +249,7 @@
             <p class="product-list__item-price product-list__item-price--catalog">990 &#8381;</p>
             <p class="product-list__item-volume product-list__item-volume--catalog">50ml</p>
 
+
           </a>
         </li>
         <li class="product-list__item">
@@ -290,7 +292,7 @@
               <source type="image/webp" srcset="img/catalog-milk-mobile.webp 1x, img/catalog-milk-mobile@2x.webp 2x">
               <source media="(min-width: 1366px)" srcset="img/catalog-milk-desktop.jpg 1x, img/catalog-milk-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/catalog-milk-tablet.jpg 1x, img/catalog-milk-tablet@2x.jpg 2x">
-              <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-milk-mobile.jpg" srcset="img/catalog-milk-mobile@2x.jpg 24" width="290" height="290" alt="">
+              <img class="product-list__item-image product-list__item-image--catalog" src="img/catalog-milk-mobile.jpg" srcset="img/catalog-milk-mobile@2x.jpg 2x" width="290" height="290" alt="">
             </picture>
             <h3 class="product-list__item-title product-list__item-title--catalog">Milk</h3>
             <h4 class="product-list__item-subtitle product-list__item-subtitle--catalog">масло для тела</h4>
@@ -438,13 +440,13 @@
         <div class="pagination__controls pagination-controls pagination__controls--catalog">
           <button class="pagination-controls__button">
             <svg class="pagination-controls__image" width="25" height="13" focusable="false">
-              <use xlink: href="img/sprite.svg#arrow-icon"></use>
+              <use xlink:href="img/sprite.svg#arrow-icon"></use>
             </svg>
             <span class="visually-hidden">Предыдущая страница</span>
           </button>
           <button class="pagination-controls__button">
             <svg class="pagination-controls__image" width="25" height="13" focusable="false">
-              <use xlink: href="img/sprite.svg#arrow-next-icon"></use>
+              <use xlink:href="img/sprite.svg#arrow-next-icon"></use>
             </svg>
             <span class="visually-hidden">Следующая страница</span>
           </button>
@@ -526,18 +528,18 @@
         <div class="pagination__page">
           <a class="pagination__page-number pagination__page-number--first" href="#">1</a>
           <span class="pagination__page-separator"></span>
-          <span class="pagination__page-number-catalog-recently-viewed">3</span>
+          <a class="pagination__page-number pagination__page-number-catalog-recently-viewed" href="#">3</a>
         </div>
         <div class="pagination__controls pagination-controls pagination__controls--catalog">
           <button class="pagination-controls__button">
             <svg class="pagination-controls__image" width="25" height="13" focusable="false">
-              <use xlink: href="img/sprite.svg#arrow-icon"></use>
+              <use xlink:href="img/sprite.svg#arrow-icon"></use>
             </svg>
             <span class="visually-hidden">Предыдущая страница</span>
           </button>
           <button class="pagination-controls__button">
             <svg class="pagination-controls__image" width="25" height="13" focusable="false">
-              <use xlink: href="img/sprite.svg#arrow-next-icon"></use>
+              <use xlink:href="img/sprite.svg#arrow-next-icon"></use>
             </svg>
             <span class="visually-hidden">Следующая страница</span>
           </button>
@@ -572,7 +574,7 @@
             <a class="social-list__link" href="http://facebook.com">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social-list__link-icon" width="11" height="18" focusable="false">
-                <use xlink: href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -580,7 +582,7 @@
             <a class="social-list__link" href="http://instagram.com">
               <span class="visually-hidden">Мы в Инстаграмме</span>
               <svg class="social-list__link-icon" width="20" height="20" focusable="false">
-                <use xlink: href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -588,7 +590,7 @@
             <a class="social-list__link" href="http://twitter.com">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social-list__link-icon" width="20" height="17" focusable="false">
-                <use xlink: href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
@@ -607,13 +609,15 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper container">
+  <footer class=" page-footer page-footer--catalog">
+    <div class="page-footer__wrapper container page-footer__wrapper--catalog">
       <div class="page-footer__wrapper-nav page-footer-nav">
         <a class="page-footer-nav__logo logo logo--footer" href="index.html">
-          <svg class="logo__image logo__image--footer" width="85" height="13" focusable="false">
-            <use xlink: href="img/sprite.svg#logo-icon"></use>
-          </svg>
+          <picture>
+            <source media="(min-width: 1366px)" srcset="img/logo-icon.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-icon.svg">
+            <img class="logo__image logo__image--footer" src="img/logo-icon.svg" width="85" height="13" alt="Логотип сайта.">
+          </picture>
         </a>
         <ul class="page-footer-nav__list footer-list">
           <li class="footer-list__item">
@@ -634,7 +638,7 @@
             <a class="social-list__link" href="http://facebook.com">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social-list__link-icon" width="11" height="18" focusable="false">
-                <use xlink: href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -642,7 +646,7 @@
             <a class="social-list__link" href="http://instagram.com">
               <span class="visually-hidden">Мы в Инстаграмме</span>
               <svg class="social-list__link-icon" width="20" height="20" focusable="false">
-                <use xlink: href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -650,7 +654,7 @@
             <a class="social-list__link" href="http://twitter.com">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social-list__link-icon" width="20" height="17" focusable="false">
-                <use xlink: href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
@@ -668,7 +672,11 @@
     </div>
 
   </footer>
-  <script>
+
+
+  <script src="js/script-index.js"></script>
+  <script src="js/script-catalog.js"></script>
+  <!-- <script>
 
     var navMain = document.querySelector('.nav');
     var navToggle = document.querySelector('.nav__button');
@@ -745,7 +753,7 @@
         navFieldsetSkin.classList.remove('fieldset--opened');
       }
     });
-  </script>
+  </script> -->
 </body>
 
 

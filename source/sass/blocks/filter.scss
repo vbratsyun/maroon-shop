@@ -7,18 +7,20 @@
   align-items: flex-end;
   flex-wrap: wrap;
   width: 100%;
-  padding: 33px 15px 0;
+  padding: 34px 15px 41px;
   background: #f8f8f6;
   // box-shadow: 0 4px 30px rgb(214 214 214 / 19%); при открытии фильтра появляется тень//
-  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    padding: 37px 45px 38px;
+    padding: 37px 45px 36px;
   }
 
   @media (min-width: $desktop-width) {
+    left: 50%;
+    max-width: 1360px;
     margin-bottom: 0;
-    padding: 38px 98px 64px;
+    padding: 34px 95px 46px;
+    transform: translateX(-50%);
   }
 }
 
@@ -31,31 +33,43 @@
 }
 
 .filter__button {
+  @include focus-border;
   position: relative;
   display: block;
   width: 108px;
-  height: 40px;
+
+  // height: 40px;
+  // max-width: 100%;
+  // max-height: 40px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 0;
   background-color: transparent;
   border: none;
-  // color: transparent;
-  // width: 108px;
-  // height: 40px;
-  // background-color: transparent;
-  // cursor: pointer;
-  // display: block;
 
-  // margin: 0;
-  // align-self: flex-start;
-  // position: relative;
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    width: 141px;
+    font-size: 16px;
+  }
 
-  // @media (min-width: $tablet-width) {
-  //   width: 21%;
-  //   align-self: center;
-  // }
+  &:hover {
+    @include hover;
+  }
 
-  // @media (min-width: $desktop-width) {
-  //   width: 12.1%;
-  // }
+  &:focus {
+    @include focus;
+
+    &::before {
+      content: "";
+      border: transparent;
+    }
+  }
+
+  &:active {
+    @include active;
+  }
 }
 
 .filter--closed .filter__button {
@@ -72,12 +86,32 @@
       left: 0;
       box-sizing: border-box;
       width: 108px;
-      height: 40px;
+      // height: 40px;
+      height: 100%;
       display: block;
       background-color: transparent;
       border: 1px solid #b3bac1;
       border-radius: 2px;
       cursor: pointer;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      width: 141px;
+    }
+  }
+
+  &:focus {
+    &::before {
+      border: transparent;
+    }
+  }
+
+  &:active {
+    &::before {
+      border: 1px solid #b3bac1;
     }
   }
 }
@@ -97,14 +131,14 @@
   &::before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 13px;
     right: -4px;
     width: 21px;
     height: 2px;
     background-color: #122947;
 
     @media (min-width: $tablet-width) {
-      top: 15px;
+      top: 19px;
       right: -3px;
       width: 25px;
     }
@@ -136,20 +170,26 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 19.5% 28% 1fr;
-    gap: 15px 60px;
-    padding: 35px 0 79px;
+    grid-template-columns: 25.5% 33.5% 35%;
+    gap: 0 20px;
+    padding: 15px 0 83px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 32px 200px 16px;
-    grid-template-columns: 27.8% 34.3% 1fr;
-    gap: 0;
+    padding: 15px 200px 16px;
+    grid-template-columns: 25.5% 31.5% 38.5%;
+    gap: 0 20px;
   }
 }
 
-.filter--nojs .fieldset__button {
-  display: none;
+.filter--nojs .form__container-button {
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -76px;
+  }
 }
 
 .filter--nojs .fieldset-list {

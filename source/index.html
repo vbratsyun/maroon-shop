@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maroon-shop</title>
   <link href="css/style.min.css" rel="stylesheet">
-  <!-- <link rel="preload" href="css/style.min.css" as="style" />
-  <link rel="preload" href="js/script-index.js" as="script" /> -->
+  <!-- <link rel="preload" href="js/script-index.js" as="script" /> -->
 </head>
 
 <body class="page__body">
@@ -29,7 +28,7 @@
             <a class="social-list__link" href="http://facebook.com">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social-list__link-icon" width="11" height="18" focusable="false">
-                <use xlink: href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -37,7 +36,7 @@
             <a class="social-list__link" href="http://instagram.com">
               <span class="visually-hidden">Мы в Инстаграмме</span>
               <svg class="social-list__link-icon" width="20" height="20" focusable="false">
-                <use xlink: href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -45,7 +44,7 @@
             <a class="social-list__link" href="http://twitter.com">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social-list__link-icon" width="20" height="17" focusable="false">
-                <use xlink: href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
@@ -53,20 +52,23 @@
       </div>
     </nav>
     <a class="page-header__logo logo logo--index" id="logo" href="#">
-      <svg class="logo__image" width="85" height="13" viewBox="0 0 85 13" focusable="false">
-        <use xlink: href="img/sprite.svg#logo-icon"></use>
-      </svg>
+      <picture>
+        <source media="(min-width: 1366px)" srcset="img/logo-icon.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-icon.svg">
+        <img class="logo__image" src="img/logo-icon.svg" width="85" height="13" alt="Логотип сайта.">
+      </picture>
+
     </a>
     <a class="page-header__login" href="#">
       <span class="visually-hidden">Войти в профиль</span>
       <svg class="page-header__login-icon" width="13" height="16" focusable="false">
-        <use xlink: href="img/sprite.svg#login-icon"></use>
+        <use xlink:href="img/sprite.svg#login-icon"></use>
       </svg>
     </a>
     <a class="page-header__basket" href="#">
       <span class="visually-hidden">Оформить покупки</span>
       <svg class="page-header__basket-icon" width="14" height="16" focusable="false">
-        <use xlink: href="img/sprite.svg#basket-icon"></use>
+        <use xlink:href="img/sprite.svg#basket-icon"></use>
       </svg>
     </a>
   </header>
@@ -87,7 +89,7 @@
             <p class="intro-list__text">Уход для лица</p>
             <span class="visually-hidden">Узнай подробости</span>
             <svg class="intro-list__link-icon" width="25" height="13" focusable="false">
-              <use xlink: href="img/sprite.svg#arrow-next-icon"></use>
+              <use xlink:href="img/sprite.svg#arrow-next-icon"></use>
             </svg>
           </a>
         </li>
@@ -96,7 +98,7 @@
             <p class="intro-list__text">Уход для тела</p>
             <span class="visually-hidden">Узнай подробости</span>
             <svg class="intro-list__link-icon" width="24" height="12" focusable="false">
-              <use xlink: href="img/sprite.svg#arrow-next-icon"></use>
+              <use xlink:href="img/sprite.svg#arrow-next-icon"></use>
             </svg>
           </a>
         </li>
@@ -105,6 +107,10 @@
     <section class="bestseller container">
       <h2 class="bestseller__title title">Бестселлеры</h2>
       <p class="bestseller__description description">Легендарные продукты, завоевавшие любовь наших клиентов</p>
+
+
+
+
 
       <ul class="bestseller__product product-list">
         <li class="product-list__item">
@@ -168,6 +174,73 @@
           </div>
 
         </li>
+        <li class="product-list__item">
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/index-rose-tablet.webp 1x, img/index-rose-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-rose-tablet.webp 1x, img/index-rose-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-rose-mobile.webp 1x, img/index-rose-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" srcset="img/index-rose-tablet.jpg 1x, img/index-rose-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/index-rose-tablet.jpg 1x, img/index-rose-tablet@2x.jpg 2x">
+            <img class="product-list__item-image" src="img/index-rose-mobile.jpg" srcset="img/index-rose-mobile@2x.jpg 2x" width="230" height="312" alt="">
+          </picture>
+          <div class="product-list__item-container">
+            <h3 class="product-list__item-title">Rose</h3>
+            <h4 class="product-list__item-subtitle">крем для лица</h4>
+            <a class="product-list__item-link" href="card.html">Подробнее</a>
+          </div>
+        </li>
+
+        <li class="product-list__item">
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/index-rest-tablet.webp 1x, img/index-rest-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-rest-tablet.webp 1x, img/index-rest-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-rest-mobile.webp 1x, img/index-rest-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" srcset="img/index-rest-tablet.jpg 1x, img/index-rest-tablet@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/index-rest-tablet.jpg 1x, img/index-rest-tablet@2x.jpg 2x">
+            <img class="product-list__item-image" src="img/index-rest-mobile.jpg" srcset="img/index-rest-mobile@2x.jpg 2x" width="230" height="312" alt="">
+          </picture>
+          <div class="product-list__item-container">
+            <h3 class="product-list__item-title">Rest</h3>
+            <h4 class="product-list__item-subtitle">минеральная пудра</h4>
+            <a class="product-list__item-link" href="#">Подробнее</a>
+          </div>
+        </li>
+        <li class="product-list__item">
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/index-cream-tablet.webp 1x, img/index-cream-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-cream-tablet.webp 1x, img/index-cream-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-cream-mobile.webp 1x, img/index-cream-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" srcset="img/index-cream-tablet.jpg 1x, img/index-cream-tablet@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/index-cream-tablet.jpg 1x, img/index-cream-tablet@2x.jpg 2x">
+            <img class="product-list__item-image" src="img/index-cream-mobile.jpg" srcset="img/index-cream-mobile@2x.jpg 2x" width="230" height="312" alt="">
+          </picture>
+          <div class="product-list__item-container">
+            <h3 class="product-list__item-title">High</h3>
+            <h4 class="product-list__item-subtitle">крем для лица</h4>
+            <a class="product-list__item-link" href="#">Подробнее</a>
+          </div>
+        </li>
+
+        <li class="product-list__item">
+          <picture>
+            <source type="image/webp" media="(min-width: 1366px)" srcset="img/index-milk-tablet.webp 1x, img/index-milk-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-milk-tablet.webp 1x, img/index-milk-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-milk-mobile.webp 1x, img/index-milk-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" srcset="img/index-milk-tablet.jpg 1x, img/index-milk-tablet@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/index-milk-tablet.jpg 1x, img/index-milk-tablet@2x.jpg 2x">
+            <img class="product-list__item-image" src="img/index-milk-mobile.jpg" srcset="img/index-milk-mobile@2x.jpg 2x" width="230" height="312" alt="">
+          </picture>
+          <div class="product-list__item-container">
+            <h3 class="product-list__item-title">Milk</h3>
+            <h4 class="product-list__item-subtitle">масло для тела</h4>
+            <a class="product-list__item-link" href="#">Подробнее</a>
+          </div>
+
+        </li>
+
+
+
+
       </ul>
       <button class="bestseller__button button" type="button">Смотреть все
       </button>
@@ -175,13 +248,13 @@
       <div class="bestseller__controls pagination-controls pagination-controls--index">
         <button class="pagination-controls__button">
           <svg class="pagination-controls__image" width="25" height="13" focusable="false">
-            <use xlink: href="img/sprite.svg#arrow-icon"></use>
+            <use xlink:href="img/sprite.svg#arrow-icon"></use>
           </svg>
           <span class="visually-hidden">Предыдущая страница</span>
         </button>
         <button class="pagination-controls__button">
           <svg class="pagination-controls__image" width="25" height="13" focusable="false">
-            <use xlink: href="img/sprite.svg#arrow-next-icon"></use>
+            <use xlink:href="img/sprite.svg#arrow-next-icon"></use>
           </svg>
           <span class="visually-hidden">Следующая страница</span>
         </button>
@@ -241,7 +314,7 @@
             <a class="social-list__link" href="http://facebook.com">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social-list__link-icon" width="11" height="18" focusable="false">
-                <use xlink: href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -249,7 +322,7 @@
             <a class="social-list__link" href="http://instagram.com">
               <span class="visually-hidden">Мы в Инстаграмме</span>
               <svg class="social-list__link-icon" width="20" height="20" focusable="false">
-                <use xlink: href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -257,7 +330,7 @@
             <a class="social-list__link" href="http://twitter.com">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social-list__link-icon" width="20" height="17" focusable="false">
-                <use xlink: href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
@@ -282,9 +355,11 @@
     <div class="page-footer__wrapper container">
       <div class="page-footer__wrapper-nav page-footer-nav">
         <a class="page-footer-nav__logo logo logo--footer" href="#logo">
-          <svg class="logo__image logo__image--footer" width="85" height="13" focusable="false">
-            <use xlink: href="img/sprite.svg#logo-icon"></use>
-          </svg>
+          <picture>
+            <source media="(min-width: 1366px)" srcset="img/logo-icon.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-icon.svg">
+            <img class="logo__image logo__image--footer" src="img/logo-icon.svg" width="85" height="13" alt="Логотип сайта.">
+          </picture>
         </a>
         <ul class="page-footer-nav__list footer-list">
           <li class="footer-list__item">
@@ -305,7 +380,7 @@
             <a class="social-list__link" href="http://facebook.com">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social-list__link-icon" width="11" height="18" focusable="false">
-                <use xlink: href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -313,7 +388,7 @@
             <a class="social-list__link" href="http://instagram.com">
               <span class="visually-hidden">Мы в Инстаграмме</span>
               <svg class="social-list__link-icon" width="20" height="20" focusable="false">
-                <use xlink: href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -321,7 +396,7 @@
             <a class="social-list__link" href="http://twitter.com">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social-list__link-icon" width="20" height="17" focusable="false">
-                <use xlink: href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
@@ -339,7 +414,8 @@
     </div>
 
   </footer>
-  <script>
+  <script src="js/script-index.js"></script>
+  <!-- <script>
 
     var navMain = document.querySelector('.nav');
     var navToggle = document.querySelector('.nav__button');
@@ -356,7 +432,8 @@
       }
     });
 
-  </script>
+  </script> -->
+
 </body>
 
 

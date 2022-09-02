@@ -90,6 +90,14 @@
   @media (min-width: $desktop-width) {
     order: 2;
   }
+
+  &:focus-within .nav__button {
+    @include focus;
+  }
+
+  // &:focus-within .nav__dropdown {
+  //   display: block;
+  // }
 }
 
 .page-header__logo {
@@ -99,43 +107,89 @@
   margin-right: auto;
 
   @media (min-width: $tablet-width) {
-    left: 0;
+    left: 18px;
   }
 
   @media (min-width: $desktop-width) {
+    left: 0;
     order: 1;
   }
 }
 
 .page-header__login {
+  @include border;
+
   @media (min-width: $desktop-width) {
     order: 3;
+  }
+
+  &:hover .page-header__login-icon {
+    @include hover;
+  }
+
+  &:focus .page-header__login-icon {
+    @include focus;
+  }
+
+  &:active .page-header__login-icon {
+    @include active;
   }
 }
 
 .page-header__login-icon {
+  @include focus-border;
+
   position: relative;
   display: block;
 
   @media (min-width: $tablet-width) {
-    // width: 16px;
-    // height: 21px;
-    // transform: scale(1.3);
+    transform: scale(1.3);
+    top: 2px;
+    left: -5px;
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      top: 0;
+    }
   }
 }
 
 .page-header__basket {
+  @include border;
+
   @media (min-width: $desktop-width) {
     order: 4;
+  }
+
+  &:hover .page-header__basket-icon {
+    @include hover;
+  }
+
+  &:focus .page-header__basket-icon {
+    @include focus;
+  }
+
+  &:active .page-header__basket-icon {
+    @include active;
   }
 }
 
 .page-header__basket-icon {
+  @include focus-border;
+
   position: relative;
   display: block;
 
   @media (min-width: $tablet-width) {
-    // width: 18px;
-    // height: 21px;
+    transform: scale(1.3);
+    top: 2px;
+    left: -2px;
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      top: 0;
+    }
   }
 }

@@ -17,7 +17,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     column-gap: 35px;
-    margin-right: 22px;
+    margin-right: 28px; /*22*/
     margin-bottom: 9px;
   }
 
@@ -43,6 +43,7 @@
 
 .nav-list__link {
   @include link;
+  @include focus-border;
 
   font-size: 28px;
   font-weight: 500;
@@ -53,5 +54,17 @@
 
   @media (min-width: $desktop-width) {
     font-size: 16px;
+  }
+
+  &:hover {
+    @include hover;
+  }
+
+  &:focus {
+    @include focus;
+  }
+
+  &:active {
+    @include active;
   }
 }

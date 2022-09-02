@@ -24,3 +24,28 @@ $mobile-width-only: 320px;
   padding: 0;
   list-style: none;
 }
+
+@mixin focus-border {
+  border-radius: 2px;
+  outline: 2px solid transparent;
+}
+
+@mixin border {
+  border: none;
+  outline: none;
+}
+
+@mixin hover {
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+@mixin focus {
+  outline: 2px solid #dc0404;
+  opacity: 0.4;
+}
+
+@mixin active {
+  outline: 2px solid transparent;
+  opacity: 1;
+}

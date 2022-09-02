@@ -3,10 +3,13 @@
   margin-bottom: 420px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 177px;
+    margin-bottom: 178px;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 286px;
   }
 }
@@ -71,9 +74,28 @@
 }
 
 .subscribe__title {
+  max-width: 100%;
+  max-height: 73px;
+  overflow: scroll;
+
   @media (min-width: $tablet-width) {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
     margin-bottom: 17px;
     line-height: 125%;
+  }
+}
+
+.subscribe__description {
+  max-width: 100%;
+  max-height: 67px;
+  overflow: scroll;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
   }
 }
 
@@ -81,9 +103,18 @@
   @include link;
 
   width: 146px;
+  max-width: 100%;
+  max-height: 39px;
+  overflow: scroll;
 
   @media (min-width: $tablet-width) {
     width: 170px;
     margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: none;
+    max-height: none;
+    overflow: hidden;
   }
 }

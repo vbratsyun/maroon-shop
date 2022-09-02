@@ -5,6 +5,8 @@
 }
 
 .nav__button {
+  @include focus-border;
+
   display: block;
   width: 22px;
   height: 16px;
@@ -25,7 +27,7 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
-  padding: 37px 15px 50px;
+  padding: 37px 15px 116px;
   background-color: #f8f8f6;
   box-shadow: 0 4px 30px rgb(214 214 214 / 19%);
 
@@ -82,6 +84,10 @@
 
   @media (min-width: $desktop-width) {
     display: none;
+
+    &::before {
+      content: none;
+    }
   }
 }
 
@@ -125,34 +131,13 @@
   }
 }
 
-.nav--opened .nav__dropdown {
-  display: block;
+// .nav--nojs .nav__button {
+//   display: block;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #dbdce0;
-  }
-
-  &--catalog,
-  &--card {
-    &::before {
-      content: none;
-    }
-  }
-}
-
-.nav--nojs .nav__button {
-  display: none;
-
-  // &--catalog {
-  //   display: block;
-  // }
-}
+//   &--catalog {
+//     display: block;
+//   }
+// }
 
 .nav--closed .nav__dropdown {
   @media (min-width: $mobile-width-only) {
@@ -173,9 +158,13 @@
   }
 }
 
+.nav--nojs .nav__button {
+  display: none;
+}
+
 .nav--nojs .nav__dropdown {
   position: absolute;
-  // display: block;
+  display: block;
 
   @media (min-width: $desktop-width) {
     position: static;
@@ -192,18 +181,31 @@
     background-color: #dbdce0;
   }
 
+  &--catalog,
   &--card {
     display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.nav--opened .nav__dropdown {
+  display: block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #dbdce0;
   }
 
   &--catalog,
   &--card {
-    &::before {
-      content: none;
-    }
+    display: block;
   }
-
-  // &--card {
-  //   display: none;
-  // }
 }

@@ -1,6 +1,7 @@
 .pagination {
   &--catalog {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -34,9 +35,22 @@
 
 .pagination__page-number {
   @include link;
+  @include focus-border;
 
   &--first {
     font-weight: 500;
+  }
+
+  &:hover {
+    @include hover;
+  }
+
+  &:focus {
+    @include focus;
+  }
+
+  &:active {
+    @include active;
   }
 }
 
@@ -67,8 +81,12 @@
 }
 
 .pagination__page-separator {
+  position: relative;
+  top: -2px;
   display: block;
-  width: 30px;
+  // width: 30px;
+  min-width: 30px;
+  max-width: 30px;
   height: 1px;
   margin: 0 6px;
   background-color: $text-color;
@@ -76,5 +94,11 @@
   @media (min-width: $tablet-width) {
     width: 50px;
     margin: 0 10px;
+  }
+
+  &--card {
+    @media (min-width: $tablet-width) {
+      top: 0;
+    }
   }
 }

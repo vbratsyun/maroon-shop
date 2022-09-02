@@ -7,6 +7,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 140px;
   }
 }
@@ -26,7 +29,7 @@
   @media (min-width: $desktop-width) {
     width: 670px;
     margin: 0;
-    padding: 90px 0 95px 100px;
+    padding: 90px 0 102px 100px;
   }
 }
 
@@ -52,6 +55,11 @@
   margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
+    width: 46%;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 25px;
   }
 }
@@ -64,7 +72,7 @@
   font-weight: 500;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     font-size: 18px;
   }
 }
@@ -76,6 +84,19 @@
 
   &--link {
     @include link;
+    @include focus-border;
+
+    &:hover {
+      @include hover;
+    }
+
+    &:focus {
+      @include focus;
+    }
+
+    &:active {
+      @include active;
+    }
   }
 
   @media (min-width: $tablet-width) {

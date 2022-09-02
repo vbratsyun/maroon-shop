@@ -2,12 +2,15 @@
   @include list;
 
   display: flex;
-  justify-content: space-between;
-  width: 111px;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 111px;
 
   &--menu {
     @media (min-width: $tablet-width) {
-      width: 101px;
+      gap: 25px;
+      max-width: 101px;
     }
 
     @media (min-width: $desktop-width) {
@@ -17,5 +20,24 @@
 }
 
 .social-list__link-icon {
+  @include focus-border;
+
   display: block;
+}
+
+.social-list__link {
+  @include link;
+  @include focus-border;
+
+  &:hover .social-list__link-icon {
+    @include hover;
+  }
+
+  &:focus .social-list__link-icon {
+    @include focus;
+  }
+
+  &:active .social-list__link-icon {
+    @include active;
+  }
 }

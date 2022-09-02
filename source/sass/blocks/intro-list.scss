@@ -5,6 +5,8 @@
   width: 290px;
 
   @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
     grid-template-columns: repeat(auto-fit, 245px);
     justify-content: space-between;
     width: 100%;
@@ -82,6 +84,7 @@
 
 .intro-list__link {
   @include link;
+  @include focus-border;
 
   display: flex;
   align-items: center;
@@ -95,6 +98,18 @@
   @media (min-width: $desktop-width) {
     padding-top: 429px;
   }
+
+  &:hover {
+    @include hover;
+  }
+
+  &:focus {
+    @include focus;
+  }
+
+  &:active {
+    @include active;
+  }
 }
 
 .intro-list__text {
@@ -102,6 +117,7 @@
 
   font-size: 12px;
   font-weight: 500;
+  max-width: 80%;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

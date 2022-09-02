@@ -19,9 +19,22 @@
 }
 
 .pagination-controls__button {
+  @include focus-border;
   display: block;
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
+
+  &:hover {
+    @include hover;
+  }
+
+  &:focus {
+    @include focus;
+  }
+
+  &:active {
+    @include active;
+  }
 }

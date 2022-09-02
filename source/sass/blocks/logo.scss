@@ -1,12 +1,8 @@
 .logo {
+  @include border;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
-    width: 90px;
-  }
-
   @media (min-width: $desktop-width) {
-    width: 131px;
     margin-left: 0;
   }
 
@@ -22,24 +18,33 @@
       margin: 0;
     }
   }
+
+  &:hover .logo__image {
+    @include hover;
+  }
+
+  &:focus .logo__image {
+    @include focus;
+  }
+
+  &:active .logo__image {
+    @include active;
+  }
 }
 
 .logo__image {
+  @include focus-border;
+
   display: block;
+  width: 85px;
+  height: 13px;
 
   @media (min-width: $tablet-width) {
-    // position: relative;
-    // top: 4px;
-    // left: 24px;
-    // transform: scale(1.55);
+    width: 131px;
+    height: 21px;
   }
 
   &--footer {
     margin-bottom: 25px;
-
-    @media (min-width: $tablet-width) {
-      width: 131px;
-      height: 21px;
-    }
   }
 }

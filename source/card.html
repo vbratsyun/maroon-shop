@@ -30,7 +30,7 @@
             <a class="social-list__link" href="http://facebook.com">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social-list__link-icon" width="11" height="18" focusable="false">
-                <use xlink: href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -38,7 +38,7 @@
             <a class="social-list__link" href="http://instagram.com">
               <span class="visually-hidden">Мы в Инстаграмме</span>
               <svg class="social-list__link-icon" width="20" height="20" focusable="false">
-                <use xlink: href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -46,7 +46,7 @@
             <a class="social-list__link" href="http://twitter.com">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social-list__link-icon" width="20" height="17" focusable="false">
-                <use xlink: href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
@@ -54,20 +54,22 @@
       </div>
     </nav>
     <a class="page-header__logo logo" href="index.html">
-      <svg class="logo__image" width="85" height="13" focusable="false">
-        <use xlink: href="img/sprite.svg#logo-icon"></use>
-      </svg>
+      <picture>
+        <source media="(min-width: 1366px)" srcset="img/logo-icon.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-icon.svg">
+        <img class="logo__image" src="img/logo-icon.svg" width="85" height="13" alt="Логотип сайта.">
+      </picture>
     </a>
     <a class="page-header__login" href="#">
       <span class="visually-hidden">Войти в профиль</span>
       <svg class="page-header__login-icon" width="13" height="16" focusable="false">
-        <use xlink: href="img/sprite.svg#login-icon"></use>
+        <use xlink:href="img/sprite.svg#login-icon"></use>
       </svg>
     </a>
     <a class="page-header__basket" href="#">
       <span class="visually-hidden">Оформить покупки</span>
       <svg class="page-header__basket-icon" width="14" height="16" focusable="false">
-        <use xlink: href="img/sprite.svg#basket-icon"></use>
+        <use xlink:href="img/sprite.svg#basket-icon"></use>
       </svg>
     </a>
   </header>
@@ -77,7 +79,7 @@
       <picture>
         <source type="image/webp" media="(min-width: 1366px)" srcset="img/card-rose-desktop.webp 1x, img/card-rose-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)" srcset="img/card-rose-tablet.webp 1x, img/card-rose-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/card-rose-tablet.webp 1x, img/card-rose-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/card-rose-mobile.webp 1x, img/card-rose-mobile@2x.webp 2x">
         <source media="(min-width: 1366px)" srcset="img/card-rose-desktop.jpg 1x, img/card-rose-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/card-rose-tablet.jpg 1x, img/card-rose-tablet@2x.jpg 2x">
         <img class="rose__image" src="img/card-rose-mobile.jpg" srcset="img/card-rose-mobile@2x.jpg 2x" width="290" height="260" alt="">
@@ -89,13 +91,15 @@
         <p class="rose__description description description--card">Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей.</p>
         <p class="rose__description description description--card rose__description--last">Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток.</p>
         <div class="fieldset fieldset--compound fieldset--closed fieldset--nojs">
-          <h3 class="fieldset__title fieldset__title--card">Состав
-            <button class="fieldset__button fieldset__button--compound" type="button"></button>
-          </h3>
+          <button class="fieldset__button fieldset__button--compound" type="button">
+            <span class="fieldset__title  fieldset__title--card">Состав</span>
+          </button>
           <p class="fieldset__text">Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.</p>
         </div>
         <div class="fieldset fieldset--application fieldset--closed fieldset--nojs">
-          <h3 class="fieldset__title fieldset__title--card">Способ применения<button class="fieldset__button fieldset__button--application" type="button"></button></h3>
+          <button class="fieldset__button fieldset__button--application" type="button">
+            <span class="fieldset__title  fieldset__title--card">Способ применения</span>
+          </button>
           <p class="fieldset__text">Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода. </p>
         </div>
         <div class="fieldset fieldset--volume">
@@ -205,19 +209,19 @@
       <div class="pagination pagination--catalog">
         <div class="pagination__page">
           <a class="pagination__page-number pagination__page-number--first" href="#">1</a>
-          <span class="pagination__page-separator"></span>
-          <span class="pagination__page-number-catalog-recently-viewed">3</span>
+          <span class="pagination__page-separator pagination__page-separator--card"></span>
+          <a class="pagination__page-number pagination__page-number-catalog-recently-viewed" href="#">3</a>
         </div>
         <div class="pagination__controls pagination-controls pagination__controls--catalog">
           <button class="pagination-controls__button">
             <svg class="pagination-controls__image" width="25" height="13" focusable="false">
-              <use xlink: href="img/sprite.svg#arrow-icon"></use>
+              <use xlink:href="img/sprite.svg#arrow-icon"></use>
             </svg>
             <span class="visually-hidden">Предыдущая страница</span>
           </button>
           <button class="pagination-controls__button">
             <svg class="pagination-controls__image" width="25" height="13" focusable="false">
-              <use xlink: href="img/sprite.svg#arrow-next-icon"></use>
+              <use xlink:href="img/sprite.svg#arrow-next-icon"></use>
             </svg>
             <span class="visually-hidden">Следующая страница</span>
           </button>
@@ -228,10 +232,12 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper container">
       <div class="page-footer__wrapper-nav page-footer-nav">
-        <a class="page-footer-nav__logo logo logo--footer" href="#logo">
-          <svg class="logo__image logo__image--footer" width="85" height="13" focusable="false">
-            <use xlink: href="img/sprite.svg#logo-icon"></use>
-          </svg>
+        <a class="page-footer-nav__logo logo logo--footer" href="index.html">
+          <picture>
+            <source media="(min-width: 1366px)" srcset="img/logo-icon.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-icon.svg">
+            <img class="logo__image logo__image--footer" src="img/logo-icon.svg" width="85" height="13" alt="Логотип сайта.">
+          </picture>
         </a>
         <ul class="page-footer-nav__list footer-list">
           <li class="footer-list__item">
@@ -252,7 +258,7 @@
             <a class="social-list__link" href="http://facebook.com">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social-list__link-icon" width="11" height="18" focusable="false">
-                <use xlink: href="img/sprite.svg#facebook-icon"></use>
+                <use xlink:href="img/sprite.svg#facebook-icon"></use>
               </svg>
             </a>
           </li>
@@ -260,7 +266,7 @@
             <a class="social-list__link" href="http://instagram.com">
               <span class="visually-hidden">Мы в Инстаграмме</span>
               <svg class="social-list__link-icon" width="20" height="20" focusable="false">
-                <use xlink: href="img/sprite.svg#instagram-icon"></use>
+                <use xlink:href="img/sprite.svg#instagram-icon"></use>
               </svg>
             </a>
           </li>
@@ -268,7 +274,7 @@
             <a class="social-list__link" href="http://twitter.com">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social-list__link-icon" width="20" height="17" focusable="false">
-                <use xlink: href="img/sprite.svg#twitter-icon"></use>
+                <use xlink:href="img/sprite.svg#twitter-icon"></use>
               </svg>
             </a>
           </li>
@@ -286,7 +292,9 @@
     </div>
 
   </footer>
-  <script>
+  <script src="js/script-index.js"></script>
+  <script src="js/script-card.js"></script>
+  <!-- <script>
 
     var navMain = document.querySelector('.nav');
     var navToggle = document.querySelector('.nav__button');
@@ -333,7 +341,7 @@
       }
     });
 
-  </script>
+  </script> -->
 </body>
 
 

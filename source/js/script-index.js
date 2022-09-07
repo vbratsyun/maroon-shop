@@ -1,4 +1,4 @@
-var navMain = document.querySelector('.nav');
+    var navMain = document.querySelector('.nav');
     var navToggle = document.querySelector('.nav__button');
 
     navMain.classList.remove('nav--nojs');
@@ -12,9 +12,3 @@ var navMain = document.querySelector('.nav');
         navMain.classList.remove('nav--opened');
       }
     });
-
-
-
-
-
-

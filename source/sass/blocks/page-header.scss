@@ -94,10 +94,6 @@
   &:focus-within .nav__button {
     @include focus;
   }
-
-  // &:focus-within .nav__dropdown {
-  //   display: block;
-  // }
 }
 
 .page-header__logo {

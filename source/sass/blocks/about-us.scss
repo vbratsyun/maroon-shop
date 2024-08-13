@@ -1,12 +1,12 @@
 .about-us {
   margin-bottom: 73px;
   padding: 55px 0 59px;
-  background: url("../../img/about-us-image-mobile.jpg") no-repeat
+  background: url("../img/about-us-image-mobile.jpg") no-repeat
     $background-color;
   background-size: cover;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background: url("../../img/about-us-image-mobile@2x.jpg") no-repeat
+    background: url("../img/about-us-image-mobile@2x.jpg") no-repeat
       $background-color;
     background-size: cover;
   }
@@ -14,12 +14,12 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 169px;
     padding: 91px 0 100px;
-    background: url("../../img/about-us-image-tablet.jpg") no-repeat
+    background: url("../img/about-us-image-tablet.jpg") no-repeat
       $background-color;
     background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../../img/about-us-image-tablet@2x.jpg") no-repeat
+      background: url("../img/about-us-image-tablet@2x.jpg") no-repeat
         $background-color;
       background-size: cover;
     }
@@ -28,12 +28,12 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 281px;
     padding: 113px 0 118px;
-    background: url("../../img/about-us-image-desktop.jpg") no-repeat
+    background: url("../img/about-us-image-desktop.jpg") no-repeat
       $background-color;
     background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../../img/about-us-image-desktop@2x.jpg") no-repeat
+      background: url("../img/about-us-image-desktop@2x.jpg") no-repeat
         $background-color;
       background-size: cover;
     }

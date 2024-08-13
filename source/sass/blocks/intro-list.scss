@@ -22,60 +22,60 @@
 
 .intro-list__item {
   &--facial-care {
-    background: url("../../img/intro-facial-care-mobile.jpg") no-repeat;
+    background: url("../img/intro-facial-care-mobile.jpg") no-repeat;
     background-size: contain;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../../img/intro-facial-care-mobile@2x.jpg") no-repeat;
+      background: url("../img/intro-facial-care-mobile@2x.jpg") no-repeat;
       background-size: contain;
     }
 
     @media (min-width: $tablet-width) {
-      background: url("../../img/intro-facial-care-tablet.jpg") no-repeat;
+      background: url("../img/intro-facial-care-tablet.jpg") no-repeat;
       background-size: contain;
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background: url("../../img/intro-facial-care-tablet@2x.jpg") no-repeat;
+        background: url("../img/intro-facial-care-tablet@2x.jpg") no-repeat;
         background-size: contain;
       }
     }
 
     @media (min-width: $desktop-width) {
-      background: url("../../img/intro-facial-care-desktop.jpg") no-repeat;
+      background: url("../img/intro-facial-care-desktop.jpg") no-repeat;
       background-size: contain;
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background: url("../../img/intro-facial-care-desktop@2x.jpg") no-repeat;
+        background: url("../img/intro-facial-care-desktop@2x.jpg") no-repeat;
         background-size: contain;
       }
     }
   }
 
   &--body-care {
-    background: url("../../img/intro-body-care-mobile.jpg") no-repeat;
+    background: url("../img/intro-body-care-mobile.jpg") no-repeat;
     background-size: contain;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../../img/intro-body-care-mobile@2x.jpg") no-repeat;
+      background: url("../img/intro-body-care-mobile@2x.jpg") no-repeat;
       background-size: contain;
     }
 
     @media (min-width: $tablet-width) {
-      background: url("../../img/intro-body-care-tablet.jpg") no-repeat;
+      background: url("../img/intro-body-care-tablet.jpg") no-repeat;
       background-size: contain;
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background: url("../../img/intro-body-care-tablet@2x.jpg") no-repeat;
+        background: url("../img/intro-body-care-tablet@2x.jpg") no-repeat;
         background-size: contain;
       }
     }
 
     @media (min-width: $desktop-width) {
-      background: url("../../img/intro-body-care-desktop.jpg") no-repeat;
+      background: url("../img/intro-body-care-desktop.jpg") no-repeat;
       background-size: contain;
 
       @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background: url("../../img/intro-body-care-desktop@2x.jpg") no-repeat;
+        background: url("../img/intro-body-care-desktop@2x.jpg") no-repeat;
         background-size: contain;
       }
     }

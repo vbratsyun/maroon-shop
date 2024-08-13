@@ -1,23 +1,23 @@
 .promo {
   margin-bottom: 80px;
-  background: url("../../img/promo-image-mobile.jpg") no-repeat
+  background: url("../img/promo-image-mobile.jpg") no-repeat
     $background-color;
   background-size: cover;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background: url("../../img/promo-image-mobile@2x.jpg") no-repeat
+    background: url("../img/promo-image-mobile@2x.jpg") no-repeat
       $background-color;
     background-size: cover;
   }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 134px;
-    background: url("../../img/promo-image-tablet.jpg") no-repeat
+    background: url("../img/promo-image-tablet.jpg") no-repeat
       $background-color;
     background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../../img/promo-image-tablet@2x.jpg") no-repeat
+      background: url("../img/promo-image-tablet@2x.jpg") no-repeat
         $background-color;
       background-size: cover;
     }
@@ -25,12 +25,12 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 140px;
-    background: url("../../img/promo-image-desktop.jpg") no-repeat
+    background: url("../img/promo-image-desktop.jpg") no-repeat
       $background-color;
     background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../../img/promo-image-desktop@2x.jpg") no-repeat
+      background: url("../img/promo-image-desktop@2x.jpg") no-repeat
         $background-color;
       background-size: cover;
     }

@@ -6,7 +6,6 @@ import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
-import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
@@ -71,19 +70,9 @@ const createWebp = () => {
 //SVG
 
 const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  gulp.src('source/img/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
-
-const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
-}
 
 // Copy
 
@@ -146,7 +135,6 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     createWebp
   ),
 );
@@ -163,7 +151,6 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     createWebp
   ),
   gulp.series(

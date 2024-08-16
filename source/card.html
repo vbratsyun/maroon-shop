@@ -105,31 +105,32 @@
           </button>
           <p class="fieldset__text">Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода. </p>
         </div>
-        <div class="fieldset fieldset--volume">
-          <h3 class="fieldset__title fieldset__title--card">Объем:</h3>
-
-
-          <ul class="fieldset__list fieldset-list fieldset-list--card">
-            <li class="fieldset-list__item fieldset-list__item--card">
-              <label class="fieldset-list__item-control control">
-                <input class="visually-hidden control__input" type="radio" name="volume" value="50ml" checked>
-                <span class="control__mark"></span>
-                <span class="control__label control__label--card">50ml</span>
-              </label>
-            </li>
-            <li class="fieldset-list__item fieldset-list__item--card">
-              <label class="fieldset-list__item-control control">
-                <input class="visually-hidden control__input" type="radio" name="volume" value="30ml">
-                <span class="control__mark"></span>
-                <span class="control__label control__label--card">30ml</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div class="rose__wrapper">
-          <p class="rose__price">890 &#8381;</p>
-          <button class="rose__button button" type="button">Добавить в корзину</button>
-        </div>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <div class="fieldset fieldset--volume">
+            <h3 class="fieldset__title fieldset__title--card">Объем:</h3>
+            <input class="visually-hidden" type="text" name="cream" value="rose">
+            <ul class="fieldset__list fieldset-list fieldset-list--card">
+              <li class="fieldset-list__item fieldset-list__item--card">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="radio" name="volume" value="50ml" checked>
+                  <span class="control__mark"></span>
+                  <span class="control__label control__label--card">50ml</span>
+                </label>
+              </li>
+              <li class="fieldset-list__item fieldset-list__item--card">
+                <label class="fieldset-list__item-control control">
+                  <input class="visually-hidden control__input" type="radio" name="volume" value="30ml">
+                  <span class="control__mark"></span>
+                  <span class="control__label control__label--card">30ml</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="rose__wrapper">
+            <p class="rose__price">890 &#8381;</p>
+            <button class="rose__button button" type="submit">Добавить в корзину</button>
+          </div>
+        </form>
       </div>
 
 
